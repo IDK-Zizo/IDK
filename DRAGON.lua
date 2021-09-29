@@ -1661,7 +1661,7 @@ if not msa3d(msg) then
 if not Devban(msg) then
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'ايدك') 
 local DRAGON_Msg = { 
-'♫ ♬♫ ♬♫ ♬♫ ♬♫ ♬♫\n ☽ اهلا بك في بوت '..Namebot..'\n ☽ اعمل على حماية المجموعات\n ☽ لتفعيل البوت :\n ☽ 1. اضف البوت الى مجموعتك\n ☽ 2. ارفعني '...Namebt..' ادمن\n ☽ 3. اكتب تفعيل فالجروب\n ☽ سيتم ترقيتك مالك فالبوت\n ☽ ( source IDK)[http://t.me/trevor_0]\n ♫ ♬♫ ♬♫ ♬♫ ♬♫ ♬♫\n',
+{'♫ ♬♫ ♬♫ ♬♫ ♬♫ ♬♫\n ☽ اهلا بك في بوت '..Namebot..'\n ☽ اعمل على حماية المجموعات\n ☽ لتفعيل البوت :\n ☽ 1. اضف البوت الى مجموعتك\n ☽ 2. ارفعني '...Namebt..' ادمن\n ☽ 3. اكتب تفعيل فالجروب\n ☽ سيتم ترقيتك مالك فالبوت\n♫ ♬♫ ♬♫ ♬♫ ♬♫ ♬♫\n'},
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
