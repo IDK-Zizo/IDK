@@ -846,7 +846,7 @@ keyboard.inline_keyboard = {
 {{text = 'رفع ادمن'},{text = 'تنزيل ادمن'}},
 {{text = 'رفع مدير'},{text = 'تنزيل مدير'}},
 {{text = 'رفع مميز'},{text = 'تنزيل مميز'}},
-{{text = 'تنزيل الكل'},
+{{text = 'تنزيل الكل'}},
 {{text = '✯𝙱𝙰𝙲𝙺↵', callback_data="/homet7kom"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..chat..'&text='..URL.escape(Texti)..'&message_id='..msgid..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
