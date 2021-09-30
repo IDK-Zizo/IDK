@@ -304,7 +304,7 @@ return false
 end 
 end
 function cleaner(msg)
-local hash = bot_data:sismember(ban_id.."banda:MN:TF"..msg.chat_id_,msg.sender_user_id_)    
+local hash = bot_data:sismember(ban_id.."DRAGON:MN:TF"..msg.chat_id_,msg.sender_user_id_)    
 if hash or SudoBot(msg) or Devban(msg) or Sudo(msg) or BasicConstructor(msg) or CoSu(msg) or Bot(msg)  then       
 return true    
 else    
@@ -361,7 +361,7 @@ elseif bot_data:sismember(ban_id..'onall'..chat_id, user_id) then
 var = true  
 elseif bot_data:sismember(ban_id..'Manager'..chat_id, user_id) then
 var = true  
-elseif bot_data:sismember(ban_id..'banda:MN:TF'..chat_id, user_id) then
+elseif bot_data:sismember(ban_id..'DRAGON:MN:TF'..chat_id, user_id) then
 var = true 
 elseif bot_data:sismember(ban_id..'Mod:User'..chat_id, user_id) then
 var = true  
@@ -405,7 +405,7 @@ elseif bot_data:sismember(ban_id..'moall'..chat_id, user_id) then
 var = bot_data:get(ban_id.."moall:Rd"..msg.chat_id_) or 'الادمن العام'  
 elseif bot_data:sismember(ban_id..'Manager'..chat_id, user_id) then
 var = bot_data:get(ban_id.."Manager:Rd"..msg.chat_id_) or 'المدير '  
-elseif bot_data:sismember(ban_id..'banda:MN:TF'..chat_id, user_id) then
+elseif bot_data:sismember(ban_id..'DRAGON:MN:TF'..chat_id, user_id) then
 var = 'منظف' 
 elseif bot_data:sismember(ban_id..'Mod:User'..chat_id, user_id) then
 var = bot_data:get(ban_id.."Mod:Rd"..msg.chat_id_) or 'الادمن'  
@@ -1648,7 +1648,7 @@ bot_data:del(ban_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id
 return false
 end
 
-------by-banda--
+------by-DRAGON--
 if Chat_Type == 'UserBot' then
 if SourceCh(msg) and text == '/start' or text == '『رجوع』' then 
 if Devban(msg) then
@@ -2834,7 +2834,7 @@ end,nil)
 end,nil)
 end
 
-if text and text:match("^باندا$") or text and text:match("^Banda$") or text and text:match("^banda$") then
+if text and text:match("^باندا$") or text and text:match("^DRAGON$") or text and text:match("^DRAGON$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 local Name1 = result.first_name_
@@ -3928,7 +3928,7 @@ keyboard.inline_keyboard = {
 {text = '• العقرب 🦂', callback_data="/zakrb"},{text = '• القوس 🏹', callback_data="/zkos"},
 },
 {
-{text = '• الحمل 🐐', callback_data="/zBanda"},
+{text = '• الحمل 🐐', callback_data="/zDRAGON"},
 },
 {
 {text = '• السرطان 🦀', callback_data="/zsltan"},{text = '• العذراء 🦋', callback_data="/zazra"},
@@ -4040,7 +4040,7 @@ keyboard.inline_keyboard = {{{text = name,url="t.me/"..user}},}
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..user..'&caption=' .. URL.escape(bio).."&reply_to_message_id="..msg_id.."&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if SourceCh(msg) and text == 'باندا' or text == 'Banda' or text == 'banda' then
+if SourceCh(msg) and text == 'باندا' or text == 'DRAGON' or text == 'DRAGON' then
 local Text = [[
 ᴘʀᴏɢʀᴀᴍᴍᴇʀ ᴘᴀɴᴅᴀ
  ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
@@ -4364,7 +4364,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. 
 send(msg.chat_id_, msg.id_,' ') 
 end
 if SourceCh(msg) and text == "تويت" or text == "كت تويت" then 
-local vBandav_Msg = { 
+local DRAGON_Msg = { 
 "مرتبط؟ ", 
 " هل بتكراش ع حد في حياتك؟", 
 " ينفع نرتبط؟", 
@@ -4729,11 +4729,11 @@ local vBandav_Msg = {
   "عادي تتزوج من برا القبيلة؟ ",
   "أجمل شي بحياتك وش هو؟ ",
 } 
-send(msg.chat_id_, msg.id_,'['..vBandav_Msg[math.random(#vBandav_Msg)]..']')  
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']')  
 return false 
 end
 if SourceCh(msg) and text == "كتبات" or text == "حكمه" or text == "قصيده" then 
-local vBandav_Msg = { 
+local DRAGON_Msg = { 
 "‏من ترك أمرهُ لله، أعطاه الله فوق ما يتمنَّاه💙 ", 
 "‏من علامات جمال المرأة .. بختها المايل ! ",
 "‏ انك الجميع و كل من احتل قلبي🫀🤍",
@@ -4791,11 +4791,11 @@ local vBandav_Msg = {
 "فى احتمال كبير انها ليلة القدر ادعوا لنفسكم كتير وأدعو ربنا يشفى كل مريض. 💙 ",
 "أنِر ظُلمتي، وامحُ خطيئتي، واقبل توبتي وأعتِق رقبتي يا اللّٰه. إنكَ عفوٌّ تُحِبُّ العفوَ؛ فاعفُ عني 💛 ", 
 } 
-send(msg.chat_id_, msg.id_,'['..vBandav_Msg[math.random(#vBandav_Msg)]..']')  
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']')  
 return false 
 end
 if SourceCh(msg) and text == "انصحني" or text == "انصحنى" or text == "انصح" then 
-local vBandav_Msg = { 
+local DRAGON_Msg = { 
 "عامل الناس بأخلاقك ولا بأخلاقهم", 
 "الجمال يلفت الأنظار لكن الطيبه تلفت القلوب ", 
 "الاعتذار عن الأخطاء لا يجرح كرامتك بل يجعلك كبير في نظر الناس ",
@@ -4857,11 +4857,11 @@ local vBandav_Msg = {
 " انصح نفسك بنفسك بمت😆",
 " كنت نصحت نفسي ياخويا😹", 
 } 
-send(msg.chat_id_, msg.id_,'['..vBandav_Msg[math.random(#vBandav_Msg)]..']')  
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']')  
 return false 
 end
 if SourceCh(msg) and text == "نكته" or text == "قولي نكته" or text == "عايز اضحك" then 
-local vBandav_Msg = { 
+local DRAGON_Msg = { 
 " مرة واحد مصري دخل سوبر ماركت في الكويت عشان يشتري ولاعة..    راح عشان يحاسب بيقوله الولاعة ديه بكام؟   قاله دينار..  قاله منا عارف ان هي نار بس بكام 🤓😂", 
 "بنت حبت تشتغل مع رئيس عصابة..   شغلها في غسيل الأموال 🤓😂 ", 
 "واحد بيشتكي لصاحبه بيقوله أنا مافيش حد بيحبني ولا يفتكرني أبدًا، ومش عارف أعمل إيه.. قاله سهلة.. استلف من الناس فلوس هيسألوا عليك كل يوم! 🤓😂",
@@ -4877,11 +4877,11 @@ local vBandav_Msg = {
 "مره واحد شاط كرة فى المقص..   اتخرمت. 🤓😂",
 "مرة واحد رايح لواحد صاحبه.. فا البواب وقفه بيقول له انت طالع لمين.. قاله طالع أسمر شوية لبابايا.. قاله يا أستاذ طالع لمين في العماره 🤓😂",
 } 
-send(msg.chat_id_, msg.id_,'['..vBandav_Msg[math.random(#vBandav_Msg)]..']')  
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']')  
 return false 
 end
 if SourceCh(msg) and text == "خيرني" or text == "لو خيروك" or text == "خيروك" then 
-local vBandav_Msg = { 
+local DRAGON_Msg = { 
 "لو خيروك |  بين الإبحار لمدة أسبوع كامل أو السفر على متن طائرة لـ 3 أيام متواصلة؟ ",
 "لو خيروك |  بين شراء منزل صغير أو استئجار فيلا كبيرة بمبلغ معقول؟ ",
 "لو خيروك |  أن تعيش قصة فيلم هل تختار الأكشن أو الكوميديا؟ ",
@@ -4979,11 +4979,11 @@ local vBandav_Msg = {
 "لو خيروك |  بين تناول الشوكولا التي تحبين طوال حياتك ولكن لا يمكنك الاستماع إلى الموسيقى وبين الاستماع إلى الموسيقى ولكن لا يمكن لك تناول الشوكولا أبدًا؟ ",
 "لو خيروك |  بين مشاركة المنزل مع عائلة من الفئران أو عائلة من الأشخاص المزعجين الفضوليين الذين يتدخلون في كل كبيرة وصغيرة؟ ",
 } 
-send(msg.chat_id_, msg.id_,'['..vBandav_Msg[math.random(#vBandav_Msg)]..']')  
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']')  
 return false 
 end
 if SourceCh(msg) and text == "حروف" or text == "حرف" or text == "الحروف" then 
-local vBandav_Msg = { 
+local DRAGON_Msg = { 
 " جماد بحرف ⋙ ر  ", 
 " مدينة بحرف ⋙ ع  ",
 " حيوان ونبات بحرف ⋙ خ  ", 
@@ -5035,11 +5035,11 @@ local vBandav_Msg = {
 "مدينة بحرف ⋙ ع  ",
 "دولة واسم بحرف ⋙ ب  ",
 } 
-send(msg.chat_id_, msg.id_,'['..vBandav_Msg[math.random(#vBandav_Msg)]..']')  
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']')  
 return false 
 end
 if SourceCh(msg) and text == "اشتمو" or text == "اشتم" or text == "نيكو" then 
-local vBandav_Msg = { 
+local DRAGON_Msg = { 
 "  كسمك يبن الوسخه", 
 " كسمسكك ",
 " هنيكك",
@@ -5090,7 +5090,7 @@ local vBandav_Msg = {
 " كفياك كدا❤'✓",
 
 } 
-send(msg.chat_id_, msg.reply_to_message_id_,'['..vBandav_Msg[math.random(#vBandav_Msg)]..']')  
+send(msg.chat_id_, msg.reply_to_message_id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']')  
 return false 
 end
 if SourceCh(msg) and text == "حفل" and Sudo(msg) or text == 'حفل عليه' and Sudo(msg) then
@@ -6428,11 +6428,11 @@ end
 if text and text:match("^all (.*)$") or text:match("^@all (.*)$") and CoSu(msg) then 
 local ttag = text:match("^all (.*)$") or text:match("^@all (.*)$") 
 if not bot_data:get(ban_id..'Cick:all'..msg.chat_id_) then 
-if bot_data:get(ban_id.."banda:all:Time"..msg.chat_id_..':'..msg.sender_user_id_) then   
+if bot_data:get(ban_id.."DRAGON:all:Time"..msg.chat_id_..':'..msg.sender_user_id_) then   
 return  
 send(msg.chat_id_, msg.id_,"انتظر دقيقه من فضلك") 
 end 
-bot_data:setex(ban_id..'banda:all:Time'..msg.chat_id_..':'..msg.sender_user_id_,300,true) 
+bot_data:setex(ban_id..'DRAGON:all:Time'..msg.chat_id_..':'..msg.sender_user_id_,300,true) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(argg,dataa)  
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = dataa.member_count_},function(ta,ban) 
 x = 0 
@@ -7943,10 +7943,10 @@ end
 end
 if #list == 0 then
 t = "●  لا يوجد مطورين"
- Banda = {
+ DRAGON = {
 {{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
 }
-send_inlin_key(msg.chat_id_,t,Banda,msg.id_)
+send_inlin_key(msg.chat_id_,t,DRAGON,msg.id_)
 end
 end
   
@@ -9207,11 +9207,11 @@ end;end,nil)
 return false
 end
 if SourceCh(msg) and text == 'مسح المنظفين' and BasicConstructor(msg) then
-bot_data:del(ban_id..'banda:MN:TF'..msg.chat_id_)
+bot_data:del(ban_id..'DRAGON:MN:TF'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, ' ● تم مسح المنظفين')
 end
 if SourceCh(msg) and text == ("المنظفين") and BasicConstructor(msg) then
-local list = bot_data:smembers(ban_id..'banda:MN:TF'..msg.chat_id_)
+local list = bot_data:smembers(ban_id..'DRAGON:MN:TF'..msg.chat_id_)
 t = "\n ● قائمة المنظفين \n━━━━━━𝓓𝓡𝓖━━━━━━\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
@@ -9227,7 +9227,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 if SourceCh(msg) and text == ("تاك للمنظفين") or text == ("صيح المنظفين") then
-local list = bot_data:smembers(ban_id..'banda:MN:TF'..msg.chat_id_)
+local list = bot_data:smembers(ban_id..'DRAGON:MN:TF'..msg.chat_id_)
 t = "\n ● وينكم تعالو يريدوكم بالجروب \n━━━━━━𝓓𝓡𝓖━━━━━━\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
@@ -9257,7 +9257,7 @@ if bot_data:get(ban_id..'Lock:Add:Bot'..msg.chat_id_) and not BasicConstructor(m
 send(msg.chat_id_, msg.id_,' ● تم تعطيل الرفع') 
 return false
 end
-bot_data:sadd(ban_id..'banda:MN:TF'..msg.chat_id_, result.sender_user_id_)
+bot_data:sadd(ban_id..'DRAGON:MN:TF'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ● الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
 status  = '\n ● تم ترقيته منظف'
@@ -9288,7 +9288,7 @@ if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_," ● عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
 return false 
 end      
-bot_data:sadd(ban_id..'banda:MN:TF'..msg.chat_id_, result.id_)
+bot_data:sadd(ban_id..'DRAGON:MN:TF'..msg.chat_id_, result.id_)
 usertext = '\n ● الـعـضو   ⋙ ['..result.title_..'](t.me/'..(username or 'textchuser')..')'
 status  = '\n ● تم ترقيته منظف'
 texts = usertext..status
@@ -9315,7 +9315,7 @@ if bot_data:get(ban_id..'Lock:Add:Bot'..msg.chat_id_) and not BasicConstructor(m
 send(msg.chat_id_, msg.id_,' ● تم تعطيل الرفع') 
 return false
 end
-bot_data:sadd(ban_id..'banda:MN:TF'..msg.chat_id_, userid)
+bot_data:sadd(ban_id..'DRAGON:MN:TF'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n ● الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
@@ -9339,7 +9339,7 @@ end
 return false
 end
 function start_function(extra, result, success)
-bot_data:srem(ban_id..'banda:MN:TF'..msg.chat_id_, result.sender_user_id_)
+bot_data:srem(ban_id..'DRAGON:MN:TF'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ● الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
 status  = '\n ● تم تنزيله من المنظفين'
@@ -9362,7 +9362,7 @@ return false
 end
 function start_function(extra, result, success)
 if result.id_ then
-bot_data:srem(ban_id..'banda:MN:TF'..msg.chat_id_, result.id_)
+bot_data:srem(ban_id..'DRAGON:MN:TF'..msg.chat_id_, result.id_)
 usertext = '\n ● الـعـضو   ⋙ ['..result.title_..'](t.me/'..(username or 'textchuser')..')'
 status  = '\n ● تم تنزيله من المنظفين'
 texts = usertext..status
@@ -9385,7 +9385,7 @@ send(msg.chat_id_, msg.id_,' ● لا تستطيع استخدام البوت \n 
 end
 return false
 end
-bot_data:srem(ban_id..'banda:MN:TF'..msg.chat_id_, userid)
+bot_data:srem(ban_id..'DRAGON:MN:TF'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n ● الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
@@ -13557,7 +13557,7 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text and text:match('^مسح (%d+)$') and Manager(msg) then
-if not bot_data:get(ban_id..'banda:Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_) then           
+if not bot_data:get(ban_id..'DRAGON:Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_) then           
 local num = tonumber(text:match('^مسح (%d+)$')) 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -13578,7 +13578,7 @@ DeleteMessage(msg.chat_id_, {[0] = msgm})
 msgm = msgm - 1048576
 end
 send(msg.chat_id_,msg.id_,' ● تم مسح {'..num..'}')  
-bot_data:setex(ban_id..'banda:Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_,300,true)
+bot_data:setex(ban_id..'DRAGON:Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_,300,true)
 end
 end
 if SourceCh(msg) and text == "تنظيف الميديا" and Manager(msg) then
@@ -13602,16 +13602,16 @@ end,nil)
 send(msg.chat_id_, msg.id_," ● تم تنظيف جميع الميديا")
 end
 if (msg.content_.animation_) or (msg.content_.photo_) or (msg.content_.video_) or (msg.content_.document) or (msg.content_.sticker_) and msg.reply_to_message_id_ == 0 then
-bot_data:sadd(ban_id.."banda:allM"..msg.chat_id_, msg.id_)
+bot_data:sadd(ban_id.."DRAGON:allM"..msg.chat_id_, msg.id_)
 end
 if SourceCh(msg) and text == ("امسح") and cleaner(msg) then  
-local list = bot_data:smembers(ban_id.."banda:allM"..msg.chat_id_)
+local list = bot_data:smembers(ban_id.."DRAGON:allM"..msg.chat_id_)
 for k,v in pairs(list) do
 local Message = v
 if Message then
 t = " ● تم مسح "..k.." من الوسائط الموجوده"
 DeleteMessage(msg.chat_id_,{[0]=Message})
-bot_data:del(ban_id.."banda:allM"..msg.chat_id_)
+bot_data:del(ban_id.."DRAGON:allM"..msg.chat_id_)
 end
 end
 if #list == 0 then
@@ -13620,7 +13620,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 if SourceCh(msg) and text == ("عدد الميديا") and cleaner(msg) then  
-local num = bot_data:smembers(ban_id.."banda:allM"..msg.chat_id_)
+local num = bot_data:smembers(ban_id.."DRAGON:allM"..msg.chat_id_)
 for k,v in pairs(num) do
 local numl = v
 if numl then
@@ -14536,7 +14536,7 @@ username = 'SOURCEDRAGON'
 end
 local msg_id = msg.id_/2097152/0.5  
 local textt = ' 🌚❤️ رتبتك في البوت⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local Banda = 'https://t.me/Qtdao/71'
+local DRAGON = 'https://t.me/Qtdao/71'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -14547,7 +14547,7 @@ local function getpro(extra, result, success)
 if result.photos_[0] then 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(DRAGON).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end,nil)
@@ -14586,7 +14586,7 @@ username = 'SOURCEDRAGON'
 end
 local msg_id = msg.id_/2097152/0.5  
 local textt = ' ❤️ انت يا قلبي '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local Banda = 'https://t.me/Qtdao/71'
+local DRAGON = 'https://t.me/Qtdao/71'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -14600,7 +14600,7 @@ local function getpro(extra, result, success)
 if result.photos_[0] then 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(DRAGON).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end,nil)
@@ -18433,7 +18433,7 @@ keyboard.inline_keyboard = {
 {text = '• العقرب 🦂', callback_data="/zakrb"},{text = '• القوس 🏹', callback_data="/zkos"},
 },
 {
-{text = '• الحمل 🐐', callback_data="/zBanda"},
+{text = '• الحمل 🐐', callback_data="/zDRAGON"},
 },
 {
 {text = '• السرطان 🦀', callback_data="/zsltan"},{text = '• العذراء 🦋', callback_data="/zazra"},
@@ -18930,7 +18930,7 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
-if SourceCh(msg) and text == '/zBanda' then
+if SourceCh(msg) and text == '/zDRAGON' then
 local Teext =[[
 برج الحمل :- ( 21/3 - 19/4 )
 
