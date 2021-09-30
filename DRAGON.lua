@@ -3802,112 +3802,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if SourceCh(msg) and text == 'تحكم' or text == "/homet7kom" then 
-local Teext =[[ 
-اتبع الازرار للتحكم ف العضو
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'تحكم ف العضو', callback_data="/t7kom"}},
-{{text = 'تحكم ف الرتبه', callback_data="/rotbag8"}},
-{{text = 'تحكم ف الصلاحيات', callback_data="/sla7yat"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..chat..'&text='..URL.escape(Texti)..'&message_id='..msgid..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
- 
-if SourceCh(msg) and text == '/t7kom' then
-local Teext =[[ 
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'كتم'},{text = 'الغاء كتم'}},
-{{text = 'حظر'},{text = 'الغاء حظر'}},
-{{text = 'تقيد'},{text = 'الغاء تقيد'}},
-{{text = '✯𝙱𝙰𝙲𝙺↵', callback_data="/homet7kom"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..chat..'&text='..URL.escape(Texti)..'&message_id='..msgid..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-if SourceCh(msg) and text == '/rotbag8' then
-local Teext =[[ 
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'رفع مشرف'},{text = 'تنزيل مشرف'}},
-{{text = 'رفع منشئ اساسي'},{text = 'تنزيل منشئ اساسي'}},
-{{text = 'رفع منشئ'},{text = 'تنزيل منشئ'}},
-{{text = 'رفع ادمن'},{text = 'تنزيل ادمن'}},
-{{text = 'رفع مدير'},{text = 'تنزيل مدير'}},
-{{text = 'رفع مميز'},{text = 'تنزيل مميز'}},
-{{text = 'تنزيل الكل'}},
-{{text = '✯𝙱𝙰𝙲𝙺↵', callback_data="/homet7kom"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..chat..'&text='..URL.escape(Texti)..'&message_id='..msgid..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-if SourceCh(msg) and text == '/sla7yat' then
-local Teext =[[ 
-تعديل الصلاحيات
-]]
-function sendin(chat,msgid,user,user_id)
-local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. chat ..'&user_id='.. user_id)
-local Json_Info = JSON.decode(Chek_Info)
-if Json_Info.result.can_change_info == true then
-info = '✯❴ ✘ ❵✯' 
-infoo = 'false' 
-else 
-info = '✯❴ ✓ ❵✯' 
-infoo = 'true' 
-end
-if Json_Info.result.can_delete_messages == true then
-delete = '✯❴ ✓ ❵✯' 
-deletee = 'false' 
-else 
-delete = '✯❴ ✘ ❵✯' 
-deletee = 'true' 
-end
-if Json_Info.result.can_invite_users == true then
-invite = '✯❴ ✓ ❵✯' 
-invitee = 'false' 
-else 
-invite = '✯❴ ✘ ❵✯' 
-invitee = 'true' 
-end
-if Json_Info.result.can_pin_messages == true then
-pin = '✯❴ ✓ ❵✯' 
-pinn = 'false' 
-else 
-pin = '✯❴ ✘ ❵✯' 
-pinn = 'true' 
-end
-if Json_Info.result.can_restrict_members == true then
-restrict = '✯❴ ✓ ❵✯' 
-restrictt = 'false' 
-else 
-restrict = '✯❴ ✘ ❵✯' 
-restrictt = 'true' 
-end
-if Json_Info.result.can_promote_members == true then
-promote = '✯❴ ✓ ❵✯' 
-promotee = 'false' 
-else 
-promote = '✯❴ ✘ ❵✯' 
-promotee = 'true' 
-end 
-if Json_Info.result.can_manage_voice_chats == true then
-voice = '✯❴ ✓ ❵✯' 
-voicee = 'false' 
-else 
-voice = '✯❴ ✘ ❵✯' 
-voicee = 'true' 
-end
-if Json_Info.result.can_manage_chat == true then
-manage = '✯❴ ✓ ❵✯' 
-managee = 'false' 
-else 
-manage = '✯❴ ✘ ❵✯' 
-managee = 'true' 
-end
 
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3936,18 +3830,6 @@ keyboard.inline_keyboard = {
 }
 local Texti = 'تم تعديل صلاحياته'
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..chat..'&text='..URL.escape(Texti)..'&message_id='..msgid..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-if SourceCh(msg) and text == '/homet7kom' then
-local Teext =[[ 
-اتبع الازرار للتحكم ف العضو
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'تحكم ف العضو', callback_data="/t7kom"}},
-{{text = 'تحكم ف الرتبه', callback_data="/rotbag8"}},
-{{text = 'تحكم ف الصلاحيات', callback_data="/sla7yat"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..chat..'&text='..URL.escape(Texti)..'&message_id='..msgid..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 
 if text == 'اصنع يوزر' or text == 'اصنع' then
