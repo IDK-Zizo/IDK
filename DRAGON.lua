@@ -745,47 +745,6 @@ manage = '♫ ❌ ♫'
 managee = 'true' 
 end
 
-if SourceCh(msg) and text == '("^تحكم @(.*)$")' or text == "/homet7kom" then 
-local Teext =[[ 
-اتبع الازرار للتحكم ف العضو
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'تحكم ف العضو', callback_data="/t7kom"}},
-{{text = 'تحكم ف الرتبه', callback_data="/rotbag8"}},
-{{text = 'تحكم ف الصلاحيات', callback_data="/sla7yat"}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..chat..'&text='..URL.escape(Texti)..'&message_id='..msgid..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'تغيير المعلومات '..info, callback_data='amr@'..user..'/user@'..user_id.."/chenginfo"..infoo},
-},
-{
-{text = 'حذف الرسائل '..delete, callback_data='amr@'..user..'/user@'..user_id.."/delmsgg"..deletee},
-},
-{
-{text = 'حظر المستخدمين '..restrict, callback_data='amr@'..user..'/user@'..user_id.."/banuser"..restrictt},
-},
-{
-{text = 'اضافه مستخدمين '..invite, callback_data='amr@'..user..'/user@'..user_id.."/addlink"..invitee},
-},
-{
-{text = 'تثبيت الرسائل '..pin, callback_data='amr@'..user..'/user@'..user_id.."/pinmsg"..pinn},
-},
-{
-{text = 'اداره المكالمات '..voice, callback_data='amr@'..user..'/user@'..user_id.."/voice"..voicee},
-},
-{
-{text = 'اضافه مشرفين '..promote, callback_data='amr@'..user..'/user@'..user_id.."/addadmin"..promotee},
-},
-}
-local Texti = 'تم تعديل صلاحياته'
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..chat..'&text='..URL.escape(Texti)..'&message_id='..msgid..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-
 function GetFile_Bot(msg)
 local list = bot_data:smembers(ban_id..'Chek:Groups') 
 local t = '{"ban_id": '..ban_id..',"GP_BOT":{'  
@@ -1019,7 +978,6 @@ end
 end
 send(msg.chat_id_, msg.id_,pre_msg)  
 end
-
 --------------------------------------------------------------------------------------------------------------
 function SourceDRAGON(msg,data) -- بداية العمل
 if msg then
