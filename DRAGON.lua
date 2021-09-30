@@ -4296,9 +4296,9 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '•ᴍʏ ᴅᴇᴠ♪', callback_data="/units"},{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', callback_data="/theytry"}},   
-{{text = '•الــقــنــوات♪', callback_data="/Ajobanf}},
-{{text = '•الــبــوتــات♪', callback_data="/gqjik}},
-{{text = '•الــبــارات♪', callback_data="/banfai}},
+{{text = '•الــقــنــوات♪', callback_data="/Ajobanf"}},
+{{text = '•الــبــوتــات♪', callback_data="/gqjik"}},
+{{text = '•الــبــارات♪', callback_data="/banfai"}},
 {{text = '♪مــطــور الــبــوت•', url="http://t.me/"..sudos.UserName}},
 {{text = '♪ اضغط لاضافه البوت لمجمعتك •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
