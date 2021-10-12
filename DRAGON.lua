@@ -1345,7 +1345,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
 if text == '/start' and DevSoFi(msg) then 
-local Text = '♫انت الان المطور الاساسي في البوت \n ♫سورس ايدك\n ♫يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/trevor_0)'
+local Text = '♫انت الان المطور الاساسي في البوت \n ♫سورس ايدك\n ♫يمكنك {'بقدونس','فرعون'}, في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/trevor_0)'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
@@ -3596,7 +3596,7 @@ local TWEET_Msg = {
 "لا تستحي من إعطاء فإن الحرمان أقل منه ", 
 "لا تظلم حتى لا تتظلم ",
 "لا تقف قصاد الريح ولا تمشي معها ",
-"لا تكسب موده التحكم الا بالتعقل",
+"لا تكسب موده ال{'بقدونس','فرعون'}, الا بالتعقل",
 "لا تمد عينك في يد غيرك ",
 "لا تملح الا لمن يستحقاها ويحافظ عليها",
 "لا حياه للإنسان بلا نبات",
@@ -5482,14 +5482,14 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------
-if text ==('تحكم') and Mod(msg) and Admin(msg) then
-function prom_reply(extra, result, success)
+if text ==('{'بقدونس','فرعون'},') and Mod(msg) and SudoBot(msg) then
+function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
 if dp.first_name_ == false then
 send(msg.chat_id_, msg.id_, 1, "♫الحساب محذوف", 1, "md")
 return false  
 end
-local Text = '♫قم باستعمال الازرار للتحكم العضو ↫ ⤈\n♫العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'trevor_0')..')'
+local Text = '♫قم باستعمال الازرار لل{'بقدونس','فرعون'}, العضو ↫ ⤈\n♫العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'trevor_0')..')'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text="♫ رفع رتبه ♫",callback_data=msg.sender_user_id_..":SetList:"..result.sender_user_id_},{text="• تنزيل رتبه •",callback_data=msg.sender_user_id_..":RemList:"..result.sender_user_id_}},
