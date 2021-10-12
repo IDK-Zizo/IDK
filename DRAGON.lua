@@ -3596,7 +3596,7 @@ local TWEET_Msg = {
 "لا تستحي من إعطاء فإن الحرمان أقل منه ", 
 "لا تظلم حتى لا تتظلم ",
 "لا تقف قصاد الريح ولا تمشي معها ",
-"لا تكسب موده ال{'بقدونس','فرعون'}, الا بالتعقل",
+"لا تكسب موده التحكم الا بالتعقل",
 "لا تمد عينك في يد غيرك ",
 "لا تملح الا لمن يستحقاها ويحافظ عليها",
 "لا حياه للإنسان بلا نبات",
@@ -5482,14 +5482,14 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------
-if text ==('{'بقدونس','فرعون'},') and Mod(msg) and SudoBot(msg) then
+if text ==('تحكم') and Mod(msg) and SudoBot(msg) then
 function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
 if dp.first_name_ == false then
 send(msg.chat_id_, msg.id_, 1, "♫الحساب محذوف", 1, "md")
 return false  
 end
-local Text = '♫قم باستعمال الازرار لل{'بقدونس','فرعون'}, العضو ↫ ⤈\n♫العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'trevor_0')..')'
+local Text = '♫قم باستعمال الازرار للتحكم بالعضو ↫ ⤈\n♫العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'trevor_0')..')'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text="♫ رفع رتبه ♫",callback_data=msg.sender_user_id_..":SetList:"..result.sender_user_id_},{text="• تنزيل رتبه •",callback_data=msg.sender_user_id_..":RemList:"..result.sender_user_id_}},
