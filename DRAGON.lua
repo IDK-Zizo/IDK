@@ -5482,31 +5482,6 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------
-if text ==('تحكم') and Mod(msg) and SudoBot(msg) then
-function start_function(extra, result, success)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
-if dp.first_name_ == false then
-send(msg.chat_id_, msg.id_, 1, "♫الحساب محذوف", 1, "md")
-return false  
-end
-local Text = '♫قم باستعمال الازرار للتحكم بالعضو ↫ ⤈\n♫العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'trevor_0')..')'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text="♫ رفع رتبه ♫",callback_data=msg.sender_user_id_..":SetList:"..result.sender_user_id_},{text="• تنزيل رتبه •",callback_data=msg.sender_user_id_..":RemList:"..result.sender_user_id_}},
-{{text="♫ كتم ♫",callback_data=msg.sender_user_id_..":Mute:"..result.sender_user_id_},{text="• الغاء كتم •",callback_data=msg.sender_user_id_..":UnMute:"..result.sender_user_id_}},
-{{text="♫ حظر ♫",callback_data=msg.sender_user_id_..":Ban:"..result.sender_user_id_},{text="• الغاء حظر •",callback_data=msg.sender_user_id_..":UnBan:"..result.sender_user_id_}},
-{{text="♫ تقيد ♫",callback_data=msg.sender_user_id_..":Tkeed:"..result.sender_user_id_},{text="• الغاء تقيد •",callback_data=msg.sender_user_id_..":UnTkeed:"..result.sender_user_id_}},
-{{text = '♫ 𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦 ♫',url="t.me/trevor_0"}}
-}
-Msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id='..msg.chat_id_..'&text='..URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end,nil)
-end 
-if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
-getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
-end 
-end
-------------------------------------------------------------------------
 if text == ("مسح المطورين") and DevSoFi(msg) then
 database:del(bot_id..'Sudo:User')
 send(msg.chat_id_, msg.id_, "\n ♫ تم مسح قائمة المطورين  ")
