@@ -21,34 +21,34 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ :\na♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• :\na•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n\27')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[0;31m♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n التوكن غير صحيح تاكد منه ثم ارسله')
+print('\27[0;31m•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
-io.write('\27[0;31m تم حفظ التوكن بنجاح \na♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n27[0;39;49m')
+io.write('\27[0;31m تم حفظ التوكن بنجاح \na•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n27[0;39;49m')
 local json = JSON.decode(url)
 database:set(id_server..":token_username",json.result.username)
 database:set(id_server..":token",token)
 end 
 else
-print('\27[0;35m♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n لم يتم حفظ التوكن ارسل لي التوكن الان')
+print('\27[0;35m•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
 os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ :\na♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n\27[0;33;49m')
+io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• :\na•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n27[0;39;49m')
+io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;31m•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 
-io.write('\27[1;31m ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
+io.write('\27[1;31m •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
 local SUDOUSERNAME = io.read():gsub('@','')
 if SUDOUSERNAME ~= '' then
 io.write('\n\27[1;34m تم حفظ معرف المطور :\n\27[0;39;49m')
@@ -88,15 +88,15 @@ token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "♫___♬__☆��� ⱽᴵᴾ☆__♬___♫♫___♬__☆��� ⱽᴵᴾ☆__♬___♫"
+echo "•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫••♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•"
 echo "TG IS NOT FIND IN FILES BOT"
-echo "♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫"
+echo "•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•"
 exit 1
 fi
 if [ ! $token ]; then
-echo "♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫"
+echo "•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•"
 echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE kkkklInfo.lua \e[0m"
-echo "♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫"
+echo "•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•"
 exit 1
 fi
 echo -e "\033[38;5;208m"
@@ -654,7 +654,7 @@ promote = '✔️'
 else
 promote = '✖'
 end
-Send(chat,msg.id_,'\n- الرتبة : مشرف  '..'\n- والصلاحيات هي ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ \n━━━━━━━━━━'..'\n- تغير معلومات الجروب ↞ ❴ '..info..' ❵'..'\n- مسح الرسائل ↞ ❴ '..delete..' ❵'..'\n- حظر المستخدمين ↞ ❴ '..restrict..' ❵'..'\n- دعوة مستخدمين ↞ ❴ '..invite..' ❵'..'\n- تثبيت الرسائل ↞ ❴ '..pin..' ❵'..'\n- اضافة مشرفين جدد ↞ ❴ '..promote..' ❵')   
+Send(chat,msg.id_,'\n- الرتبة : مشرف  '..'\n- والصلاحيات هي •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• \n━━━━━━━━━━'..'\n- تغير معلومات الجروب ↞ ❴ '..info..' ❵'..'\n- مسح الرسائل ↞ ❴ '..delete..' ❵'..'\n- حظر المستخدمين ↞ ❴ '..restrict..' ❵'..'\n- دعوة مستخدمين ↞ ❴ '..invite..' ❵'..'\n- تثبيت الرسائل ↞ ❴ '..pin..' ❵'..'\n- اضافة مشرفين جدد ↞ ❴ '..promote..' ❵')   
 end
 end
 end
@@ -756,7 +756,7 @@ end
 function Addmp3(msg,chat,kkl,ffrr)
 local eer = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..kkl)) 
 download_to_file('https://api.telegram.org/file/bot'..token..'/'..eer.result.file_path,ffrr) 
-sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼������ ��� ⱽᴵᴾ")  
+sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ")  
 os.execute('rm -rf ./'..ffrr) 
 end
 function Addsticker(msg,chat,Sd,rre)
@@ -952,45 +952,45 @@ if not DevSoFi(msg) then
 if text == '/start' then  
 local bl = 'مرحبا بيك عزيزي العضو اليك الاوامر في الاسفل'
 local keyboard = {
-{'⚚━━━⚚ مطورين السورس ⚚━━━⚚'},
-{'غامبول','بقدونس','فرعون'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♬•♫• مطورين السورس •♬•♫•'},
+{'بقدونس','فرعون'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'ثيم','بايو','ايدي'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'عايز بوت','التواصل'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'تويت','صراحه'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'انصحنى','كتابات'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'عايز اضحك','نكته'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'مطور','انا مين'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'تعطيل مريم', 'تفعيل مريم',' مريم'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'الالعاب'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'نسبه جمالي','صورتي'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'روايات','حروف بالصور'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'لو خيروك','تويت بالصور'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'التاريخ','الساعه'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'سعر التنصيب'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'بوستات','باد','حروف'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'بوتات','يوتيوب','استوري'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'قصيده','حكمه'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'غنيلي'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'بوت افلام وقصص +18🥵'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'بوت صنع منشورات بزرائر 📔'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
@@ -1034,7 +1034,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = '𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"}},
 {{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆',url="t.me/Fr3on1"}},
-{{text = ' 𝚂𝙾𝚄𝚁𝙲𝙴 𝚃𝚁𝙴𝚅𝙾𝚁',url="t.me/trevor_0"}},
+{{text = ' ������ ���ⱽᴵᴾ',url="t.me/trevor_0"}},
 {{text = '𝚃𝚁𝙴𝚅𝙾𝚁',url="t.me/trrevor"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -1084,15 +1084,15 @@ end
 if text == 'قـسم الالـعـاب' then
 local Text = 'مرحب بيك في قسم الالعاب'
 local Key = {
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'مطور','انا مين'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'انصحنى','كتبات'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'تويت بالصور','لو خيروك بالصور'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'صراحه','تويت'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'حروف','لو خيروك','نكته'},
 {'𝔟𝔞𝔠𝔨 ⚡'},
 }
@@ -1101,15 +1101,15 @@ end
 if text == 'قسم المميزات' then
 local Text = 'مميزات خاصه ب اللي منصبين مميزات '
 local Key = {
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'اغاني','مميزات'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'الافلام','العاب'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'قران','روايات'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'استوري'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'ثيم','غنيلي'},
 {'𝔟𝔞𝔠𝔨 ⚡'},
 }
@@ -1119,7 +1119,7 @@ end
 if text == 'قسم مطورين السورس والمطورين' then
 local Text = ' قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
-{'⚚━━━⚚ مطورين السورس ⚚━━━⚚'},
+{'•♬•♫• مطورين السورس •♬•♫•'},
 {'التواصل','عايز بوت','يا سورس'},
 {'فرعون','بقدونس'},
 {'𝔟𝔞𝔠𝔨 ⚡'},
@@ -1144,19 +1144,19 @@ end
 if DevSoFi(msg) then
 local bl = '☆'
 local keyboard = {
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
-{'غامبول','بقدونس','فرعون'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
+{'بقدونس','فرعون'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','الاحصائيات'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'قسم مطورين السورس والمطورين','قـسم مـسح&اضـف'},
 {'قـسم تـفعيل&تـعطيل','قـسم الـحمايه'},
 {'قـسم الاذاعـه'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'جلب المشتركين','جلب النسخه'},
 {'جلب المطورين','جلب التوكن'},
-{'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'},
+{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'تحديث السورس ','الاصدار'},
 {'معلومات السيرفر'},
 {'الغاء'},
@@ -1171,7 +1171,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,ta)
 vardump(data)
 if data and data.messages_[0].content_.sticker_ then
 local Name = '['..string.sub(ta.first_name_,0, 40)..'](tg://user?id='..ta.id_..')'
-local Text = ' ♫تم ارسال الملصق من ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n - '..Name
+local Text = ' ♫تم ارسال الملصق من •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n - '..Name
 sendText(SUDO,Text,0,'md')
 end 
 end,nil) 
@@ -1318,11 +1318,11 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '⇗ نظام التشغيل ⇖•\n* '"$linux_version"'*' 
-echo '♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫↝ الذاكره العشوائيه ↜  ↚\n* '"$memUsedPrc"'*'
-echo '♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫↝ وحـده الـتـخـزيـن ↜  ↚\n* '"$HardDisk"'*'
-echo '♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫↝ الـمــعــالــج ↜  ↚\n* '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫↝ الــدخــول ↜  ↚\n* '`whoami`'*'
-echo '♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫↝ مـده تـشغيـل الـسـيـرفـر ↜ ↚\n* '"$uptime"'*'
+echo '•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫↝ الذاكره العشوائيه ↜  ↚\n* '"$memUsedPrc"'*'
+echo '•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫↝ وحـده الـتـخـزيـن ↜  ↚\n* '"$HardDisk"'*'
+echo '•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫↝ الـمــعــالــج ↜  ↚\n* '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫↝ الــدخــول ↜  ↚\n* '`whoami`'*'
+echo '•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫↝ مـده تـشغيـل الـسـيـرفـر ↜ ↚\n* '"$uptime"'*'
 ]]):read('*all'))  
 end
 if text == 'تحديث السورس ' and DevSoFi(msg) then 
@@ -1373,14 +1373,14 @@ keyboard.inline_keyboard = {
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'قسم مطورين السورس والمطورين' and DevSoFi(msg) then 
 local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
-{'⚚━━━⚚ مطورين السورس ⚚━━━⚚'},
-{'غامبول','بقدونس','فرعون'},
+{'•♬•♫• مطورين السورس •♬•♫•'},
+{'بقدونس','فرعون'},
 {'يا سورس','التواصل'},
 {'العوده☆'},
 }
@@ -1498,7 +1498,7 @@ if text == 'الاصدار' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ♫ اصدار سورس ايدك{ 3x☆}')
 end
-if text == '⚚━━━⚚ مطورين السورس ⚚━━━⚚' then
+if text == '•♬•♫• مطورين السورس •♬•♫•' then
 local Text = [[ 
 قناه يوزرات مطورين ومطورين السورس 💕♫.
 محتاج تنصب بوت ببلاش تواصل معان ☆⬇️.
@@ -1507,10 +1507,10 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = ' 𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
 {{text = ' بوت التواصل',url="t.me/trevor1_bot"}}, 
-{{text = '������ ��� ⱽᴵᴾ ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'مطورين السورس' then
 local Text = [[ 
@@ -1521,32 +1521,32 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = ' 𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
 {{text = ' بوت التواصل',url="t.me/trevor1_bot"}}, 
-{{text = '������ ��� ⱽᴵᴾ ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '♫___♬__☆��� ⱽᴵᴾ☆__♬___♫' and DevSoFi(msg) then
+if text == '•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس ايدك ادخل وتابع الجديد](t.me/trevor_0)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}}, 
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '⚚━━━━━⚚𝐓𝐑𝐄??𝐎𝐑⚚━━━━━⚚' and DevSoFi(msg) then
+if text == '•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس ايدك ادخل وتابع الجديد](t.me/trevor_0)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}}, 
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'معلومات الكيبورد' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
@@ -1587,33 +1587,17 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
 end
-if text == 'مطور السورس' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-↝المطور ايدك لو حابب تتواصل معاه
-اتبع الزر إلى تحت ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫↜
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '🄴🄶🅈🄿🅃☆', url="t.me/@trrevor"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
  ♫ من أحسن السورسات على التليجرام سورس ايدك ♫
-بجد سورس أمان جدا وفي مميزات جامده
-تع نصب بوتك عندنا لو محظور
-خش علي تواصل هيدخلك قناه اليوزرات 
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}}, 
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
@@ -1623,7 +1607,7 @@ return false
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n ♫ قائمة مطورين الثانويين للبوت \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة مطورين الثانويين للبوت \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1662,7 +1646,7 @@ return false
 end
 if text == ("المطورين") and SudoBot(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ♫ قائمة المطورين \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المطورين \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1678,7 +1662,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("قائمه العام") and SudoBot(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n ♫ قائمه المحظورين عام \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمه المحظورين عام \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1695,7 +1679,7 @@ return false
 end
 if text == ("قائمه الكتم العام") and SudoBot(msg) then
 local list = database:smembers(bot_id..'Gmute:User')
-t = "\n ♫ قائمة المكتومين عام \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المكتومين عام \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -3082,7 +3066,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == "الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local All_name = database:smembers(bot_id.."DRAGON:blocname"..msg.chat_id_)
-t = "\n ♫ قائمة الاسماء المكتومه \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ \n"
+t = "\n ♫ قائمة الاسماء المكتومه \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• \n"
 for k,v in pairs(All_name) do
 t = t..""..k.."- (["..v.."])\n"
 end
@@ -3317,10 +3301,10 @@ end,nil)
 end
 if text == 'قناه السورس' or text == 'سورس' or text == 'السورس' or text == 'يا سورس' then  
 local Text = [[  
-╭━━━━━❲☆[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)☆❳━━━━━╮
+╭━❲☆[𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)☆❳━╮
    [𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)
  [𝑇𝐻𝐸 𝐵𝐸𝑆𝑇 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝑁 𝑇𝐸𝐿𝐸𝐺𝑅𝐴𝑀](t.me/trevor_0)
-╰━━━━━❲☆[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)☆❳━━━━━╯
+╰━❲☆[𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)☆❳━╯
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
@@ -3329,7 +3313,7 @@ keyboard.inline_keyboard = {
 {{text = '◍ 𝐌𝐘 𝐆𝐑𝐎𝐔𝐏 ♫  ', url="t.me/team_fawzii"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
@@ -3341,11 +3325,11 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = ' 𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
 {{text = ' بوت التواصل',url="t.me/trevor1_bot"}}, 
-{{text = '������ ��� ⱽᴵᴾ ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
@@ -3359,16 +3343,6 @@ keyboard.inline_keyboard = {{{text = '  𓌹 ˹𝐙𝐈𝐙𝐎¹˼ 𓌺 ',url="
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trrevor&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-
-if text == '♫___♬__☆��� ⱽᴵᴾ☆__♬___♫' or text == 'المطور' then
-local msg_id = msg.id_/2097152/0.5
-local Text = [[
-صاحب السورس 🌚💋
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = '  𓌹 ˹𝐙𝐈𝐙𝐎¹˼ 𓌺 ',url="t.me/trrevor"}},}
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trrevor&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
 
 if text == 'مكفهر' or text == "شهد" or text == "كاتبه" then
 local msg_id = msg.id_/2097152/0.5
@@ -3453,7 +3427,7 @@ keyboard.inline_keyboard = {
 {{text = 'لتنصيب بوتك',url="t.me/trrevor"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
@@ -3467,7 +3441,7 @@ return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000
 },function(ta,DRAGON)
-local t = "\nツ قائمة الاعضاء \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ \n"
+local t = "\nツ قائمة الاعضاء \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• \n"
 x = 0
 local list = DRAGON.members_
 for k, v in pairs(list) do
@@ -3485,7 +3459,7 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = '𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"}},
 {{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆',url="t.me/Fr3on1"}},
-{{text = ' 𝚂𝙾𝚄𝚁𝙲𝙴 𝚃𝚁𝙴𝚅𝙾𝚁',url="t.me/trevor_0"}},
+{{text = ' 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ',url="t.me/trevor_0"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/xxvvzm/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4285,21 +4259,21 @@ end
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
 end
-if text == '������ ��� ⱽᴵᴾ ' then
+if text == '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ' then
 local Text = [[ 
  ♫من أحسن السورسات على التليجرام سورس ايدك ♫
 حمايه.سرعه.دقه وامان
  قناه السورس ⬇️
-  [W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚃𝚁𝙴𝚅𝙾𝚁](http://t.me/trevor_0)
+  [W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 ������ ���ⱽᴵᴾ](http://t.me/trevor_0)
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '������ ��� ⱽᴵᴾ ', url="t.me/trevor_0"}}, 
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '♫___♬__☆��� ⱽᴵᴾ☆__♬___♫' then
+if text == '•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•' then
 local Text = [[ 
  ♫من أحسن السورسات على التليجرام سورس ايدك ♫
 بجد سورس أمان جدا وفي مميزات جامده
@@ -4308,10 +4282,10 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}}, 
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
@@ -4323,7 +4297,7 @@ keyboard.inline_keyboard = {
 {{text = '𝐓𝐑𝐄𝐕𝐎𝐑', url="t.me/trrevor"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevor_0/47&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'جيمز' or text == 'العاب' or text == 'العاب متطوره' then  
 local Text = [[  
@@ -4357,10 +4331,10 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevoradd/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --------------------------------------------------------------------------------------------------------------
 if text == ("انذار") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) and not database:get(bot_id..'NightRang:inthar:group'..msg.chat_id_) then
@@ -4462,7 +4436,7 @@ GetFile_Bot(msg)
 end
 if text == 'الاوامر المضافه' and Constructor(msg) then
 local list = database:smembers(bot_id..'List:Cmd:Group:New'..msg.chat_id_..'')
-t = " ♫ قائمه الاوامر المضافه  \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = " ♫ قائمه الاوامر المضافه  \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 Cmds = database:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
@@ -5477,7 +5451,7 @@ return false
 end
 if text == ("قائمه العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n ♫ قائمة المحظورين عام \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المحظورين عام \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5824,7 +5798,7 @@ send(msg.chat_id_, msg.id_, "\n ♫ تم مسح قائمة المطورين  ")
 end
 if text == ("المطورين") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ♫  قائمة مطورين البوت \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫  قائمة مطورين البوت \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5910,7 +5884,7 @@ end
 
 
 if text == 'الملفات' and DevSoFi(msg) then
-t = ' ♫ ملفات السورس ايدك♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ \n'
+t = ' ♫ ملفات السورس ايدك•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -5927,8 +5901,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n ♫ اهلا بك في متجر ملفات ايدك\n ♫ ملفات السورس ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n◤━───━??𝗼𝗼𝗼𝗻━───━◥\n\n"
-local TextE = "\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫ علامة تعني { ✔️ } ملف مفعل\n ♫ علامة تعني { ✖ } ملف معطل\n ♫ قناة سورس ايدك♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n".." ♫ [اضغط هنا لدخول](t.me/trevor_0) \n"
+local TextS = "\n ♫ اهلا بك في متجر ملفات ايدك\n ♫ ملفات السورس •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n◤━───━??𝗼𝗼𝗼𝗻━───━◥\n\n"
+local TextE = "\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫ علامة تعني { ✔️ } ملف مفعل\n ♫ علامة تعني { ✖ } ملف معطل\n ♫ قناة سورس ايدك•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n".." ♫ [اضغط هنا لدخول](t.me/trevor_0) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -6150,7 +6124,7 @@ end
 
 if text == 'قائمه ايدك' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ♫ قائمه ايدك\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمه ايدك\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6167,7 +6141,7 @@ return false
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6334,7 +6308,7 @@ st = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..tok
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = " ♫ المنشئين الاساسين تعالو مخرب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = " ♫ المنشئين الاساسين تعالو مخرب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6356,7 +6330,7 @@ Srrt = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..t
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = " ♫ المنشئين الاساسين تعالو مخرب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = " ♫ المنشئين الاساسين تعالو مخرب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6446,7 +6420,7 @@ return false
 end
 if text == 'المنشئين الاساسين' and CoSu(msg) then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ♫ قائمة المنشئين الاساسين \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المنشئين الاساسين \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6463,7 +6437,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6631,7 +6605,7 @@ end
 
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ♫ قائمة المنشئين \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المنشئين \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6647,7 +6621,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6829,7 +6803,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == ("المدراء") and Constructor(msg) then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ♫ قائمة المدراء \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المدراء \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6845,7 +6819,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7066,7 +7040,7 @@ return false
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n ♫  قائمة مطورين الثانويين للبوت \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫  قائمة مطورين الثانويين للبوت \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7409,7 +7383,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح الادمنيه')
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ♫ قائمة الادمنيه \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة الادمنيه \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7425,7 +7399,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للادمنيه") or text == ("صيح الادمنيه") then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7938,7 +7912,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ♫ قائمة مميزين الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة مميزين الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7954,7 +7928,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ وينكم تعالو يريدوكم بالجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8202,7 +8176,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح جميع الزوجات')
 end
 if text == ("تاك للزوجات") and Mod(msg) then
 local list = database:smembers(bot_id..'Mode:User'..msg.chat_id_)
-t = "\n ♫ قائمه زوجات الجروب \n ♫═───═❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳═───═??\n"
+t = "\n ♫ قائمه زوجات الجروب \n ♫═───═❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳═───═??\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8271,7 +8245,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح جميع الكلاب')
 end
 if text == ("تاك للكلاب") and Mod(msg) then
 local list = database:smembers(bot_id..'Modde:User'..msg.chat_id_)
-t = "\n ♫ قائمه كلاب الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمه كلاب الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8340,7 +8314,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع حمير من الج�
 end
 if text == ("تاك للحمير") and Mod(msg) then
 local list = database:smembers(bot_id..'Sakl:User'..msg.chat_id_)
-t = "\n ♫ قائمة حمير الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة حمير الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8410,7 +8384,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع وتكات الجرو
 end
 if text == ("تاك للوتكات") and Mod(msg) then
 local list = database:smembers(bot_id..'Motte:User'..msg.chat_id_)
-t = "\n ♫ قائمة وتكات الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة وتكات الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8479,7 +8453,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع القرده بالج
 end
 if text == ("تاك للقرود") and Mod(msg) then
 local list = database:smembers(bot_id..'Motee:User'..msg.chat_id_)
-t = "\n ♫ قائمة القرود الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة القرود الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8548,7 +8522,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع الارامل بال
 end
 if text == ("تاك للارامل") and Mod(msg) then
 local list = database:smembers(bot_id..'Bro:User'..msg.chat_id_)
-t = "\n ♫ قائمة ارامل الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة ارامل الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8617,7 +8591,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع الخولات بال
 end
 if text == ("تاك للخولات") and Mod(msg) then
 local list = database:smembers(bot_id..'Girl:User'..msg.chat_id_)
-t = "\n ♫ قائمة خولات الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة خولات الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8686,7 +8660,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع البقرات بال
 end
 if text == ("تاك للبقرات") and Mod(msg) then
 local list = database:smembers(bot_id..'Bakra:User'..msg.chat_id_)
-t = "\n ♫ قائمة البقرات الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة البقرات الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8755,7 +8729,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع المزز بالجر
 end
 if text == ("تاك للمزز") and Mod(msg) then
 local list = database:smembers(bot_id..'Tele:User'..msg.chat_id_)
-t = "\n ♫ قائمة مزز الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة مزز الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8824,7 +8798,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للاكساس") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة كساس الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة كساس الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8892,7 +8866,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع القلوب ')
 end
 if text == ("تاك لقلبي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة القلوب في الجروب\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة القلوب في الجروب\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8961,7 +8935,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع أولادي')
 end
 if text == ("تاك لولادي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة كساس الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة كساس الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9078,7 +9052,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك لبناتي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة بناتي الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة بناتي الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9147,7 +9121,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للخاينين") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة الخاينين الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة الخاينين الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9216,7 +9190,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع زواحف')
 end
 if text == ("تاك للرقاصات") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة رقاصات الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة رقاصات الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9285,7 +9259,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع جريزي')
 end
 if text == ("تاك للمتناكين") and Mod(msg) then
 local list = database:smembers(bot_id..'Jred:User'..msg.chat_id_)
-t = "\n ♫ قائمة المتناكين الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المتناكين الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9354,7 +9328,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح كل الحكاكين')
 end
 if text == ("تاك للحكاكين") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة حكاكين الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة حكاكين الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9422,7 +9396,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح كل النسوان بالجروب
 end
 if text == ("تاك للنسوان") and Mod(msg) then
 local list = database:smembers(bot_id..'Girl:User'..msg.chat_id_)
-t = "\n ♫ قائمة نسوان الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة نسوان الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9490,7 +9464,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح جميع المتزوجين')
 end
 if text == ("تاك للمتزوجين") and Mod(msg) then
 local list = database:smembers(bot_id..'Mode:User'..msg.chat_id_)
-t = "\n ♫ قائمه ازواج الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمه ازواج الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9559,7 +9533,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للميتنين") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♫ قائمة الميتنين \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة الميتنين \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9653,6 +9627,95 @@ if text == ("اشخرله") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(
   end
 
 
+if text == 'انا جيت' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦', url="t.me/trevor_0"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevoradd/5&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+
+
+if text == 'عركني' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦', url="t.me/trevor_0"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/trevoradd/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'موت' then
+local Text = [[
+هشنق نفسي حاضر
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦', url="t.me/trevor_0"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/trevoradd/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'تف' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦', url="t.me/trevor_0"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevoradd/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'رقص' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦', url="t.me/trevor_0"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevoradd/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'بخ' then
+local Text = [[
+يوه خدتني اجدع
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦', url="t.me/trevor_0"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevoradd/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'بوم' then
+local Text = [[
+انفجر نيهاهاهاها
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦', url="t.me/trevor_0"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevoradd/11&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'تخ' then
+local Text = [[
+مووووووووووووت
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝒮𝒪𝒰𝑅𝒞𝐸 𝐼𝒟𝒦', url="t.me/trevor_0"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/trevoradd/12&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
 
 if (text == ("اصحه")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
@@ -9681,7 +9744,7 @@ send(msg.chat_id_, msg.id_, '\n ♫ تم مسح المحظورين')
 end
 if text == ("المحظورين") then
 local list = database:smembers(bot_id..'Ban:User'..msg.chat_id_)
-t = "\n ♫ قائمة محظورين الجروب \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة محظورين الجروب \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9921,7 +9984,7 @@ send(msg.chat_id_, msg.id_, ' ♫ تم مسح المكتومين')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = database:smembers(bot_id..'Muted:User'..msg.chat_id_)
-t = "\n ♫ قائمة المكتومين \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المكتومين \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -11049,13 +11112,13 @@ kickme = '✘'
 end
 NUM_MSG_MAX = database:hget(bot_id.."flooding:settings:"..msg.chat_id_,"floodmax") or 0
 local text = 
-'\n❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳'..
-'\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'..
+'\n❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳'..
+'\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'..
 '\n ♫ اعدادات الجروب كتالي ☆'..
-'\nء♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'..
+'\nء•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'..
 '\n ♫  علامة ال {✓} تعني مفعل'..
 '\n ♫  علامة ال {✘} تعني معطل'..
-'\nء♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'..
+'\nء•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'..
 '\n ♫  الروابط  ⇇{ '..lock_links..
 ' }\n'..' ♫  المعرفات  ⇇{ '..lock_user..
 ' }\n'..' ♫  التاك  ⇇{ '..lock_hash..
@@ -11066,7 +11129,7 @@ local text =
 ' }\n'..' ♫  الماركدون  ⇇{ '..lock_mark..
 ' }\n'..' ♫  التعديل  ⇇{ '..lock_edit..
 ' }\n'..' ♫  تعديل الميديا  ⇇{ '..lock_edit_med..
-' }\nء♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'..
+' }\nء•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'..
 '\n'..' ♫  الكلايش  ⇇{ '..lock_spam..
 ' }\n'..' ♫  الكيبورد  ⇇{ '..lock_inlin..
 ' }\n'..' ♫  الاغاني  ⇇{ '..lock_vico..
@@ -11075,7 +11138,7 @@ local text =
 ' }\n'..' ♫  الدردشه  ⇇{ '..lock_text..
 ' }\n'..' ♫   الفيديو  ⇇{ '..lock_ved..
 ' }\n'..' ♫   الصور  ⇇{ '..lock_photo..
-' }\nء♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'..
+' }\nء•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'..
 '\n'..' ♫   الصوت  ⇇{ '..lock_muse..
 ' }\n'..' ♫  الملصقات  ⇇{ '..lock_ste..
 ' }\n'..' ♫  الجهات  ⇇{ '..lock_phon..
@@ -11089,7 +11152,7 @@ local text =
 ' }\nء⧬━┅┅┄⟞❲[᪣𝚃𝚁𝙴𝚅𝙾𝚁᪣](t.me/trevor_0)❳⟝┄┉┉━⧬'..
 '\n ♫  علامة ال {✓} تعني مفعل'..
 '\n ♫  علامة ال {✘} تعني معطل'..
-'\nء♫___♬__☆��� ⱽᴵᴾ☆__♬___♫'..
+'\nء•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'..
 '\n'..' ♫  امر صيح  ⇇{ '..kickme..
 ' }\n'..' ♫  امر اطردني  ⇇{ '..sehuser..
 ' }\n'..' ♫  امر منو ضافني  ⇇{ '..addme..
@@ -11098,7 +11161,7 @@ local text =
 ' }\n'..' ♫  الايدي  ⇇{ '..idgp..
 ' }\n'..' ♫  الايدي بالصوره  ⇇{ '..idph..
 ' }\n'..' ♫  الرفع  ⇇{ '..setadd..
-' }\n'..' ♫  الحظر  ⇇{ '..banm..' }\n\n ♫═───═❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳═───═ ♫\n ♫ قناة سورس ايدك♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n [ ❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳](t.me/trevor_0) \n'
+' }\n'..' ♫  الحظر  ⇇{ '..banm..' }\n\n ♫═───═❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳═───═ ♫\n ♫ قناة سورس ايدك•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n [ ❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳](t.me/trevor_0) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -11205,13 +11268,13 @@ if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n ♫قائمه الزخرفه \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫قائمه الزخرفه \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\nاضغط علي الاسم ليتم نسخه\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ٴ\n ♫ ❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ ♫ ')
+send(msg.chat_id_, msg.id_, t..'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\nاضغط علي الاسم ليتم نسخه\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•ٴ\n ♫ ❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ ♫ ')
 end
 if text == "ضع رابط" or text == 'وضع رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
@@ -11495,7 +11558,7 @@ end
 
 if text == "قائمه المنع" and Manager(msg) then   
 local list = database:smembers(bot_id.."DRAGON1:List:Filter"..msg.chat_id_)  
-t = "\n ♫ قائمة المنع \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة المنع \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do  
 local DRAGON_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..v..msg.chat_id_)   
 t = t..""..k.."- "..v.."  ⇇{"..DRAGON_Msg.."}\n"    
@@ -11641,7 +11704,7 @@ return false
 end
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = "\n ♫ قائمة البوتات الموجوده \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+text = "\n ♫ قائمة البوتات الموجوده \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -11660,7 +11723,7 @@ send(msg.chat_id_, msg.id_, " ♫ لا توجد بوتات في الجروب")
 return false 
 end
 if #admins == i then 
-local a = '\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫ عدد البوتات التي هنا >> {'..n..'} بوت\n'
+local a = '\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫ عدد البوتات التي هنا >> {'..n..'} بوت\n'
 local f = ' ♫ عدد البوتات التي هي ادمن >> {'..t..'}\n ♫ ملاحضه علامة ال ( ♫) تعني ان البوت ادمن \n'
 send(msg.chat_id_, msg.id_, text..a..f)
 end
@@ -11749,7 +11812,7 @@ if #list == 0 then
 send(msg.chat_id_, msg.id_,' ♫ لا توجد صلاحيات مضافه')
 return false
 end
-t = "\n ♫ قائمة الصلاحيات المضافه \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+t = "\n ♫ قائمة الصلاحيات المضافه \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 var = database:get(bot_id.."Comd:New:rt:bot:"..v..msg.chat_id_)
 if var then
@@ -12545,7 +12608,7 @@ end
 
 if text == ("الردود العامه") and DevSoFi(msg) then 
 local list = database:smembers(bot_id..'List:Rd:Sudo')
-text = "\n ♫ قائمة الردود العامه \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+text = "\n ♫ قائمة الردود العامه \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Sudo:Gif"..v) then
 db = 'متحركه'
@@ -12769,7 +12832,7 @@ end
 
 if text == ("الردود") and Manager(msg) then
 local list = database:smembers(bot_id..'List:Manager'..msg.chat_id_..'')
-text = " ♫ قائمه الردود \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+text = " ♫ قائمه الردود \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = 'متحركه'
@@ -12936,7 +12999,7 @@ if audios.Info == true then
 local Text ='تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -12949,7 +13012,7 @@ ght = math.random(1,33);
 local Text ='الستخدم ثيم اخر اكتب ثيم'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
- {{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+ {{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/ahmedthem1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12965,7 +13028,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12975,7 +13038,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/19&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12985,7 +13048,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = ' 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/comxnxp/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12995,7 +13058,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = ' 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/Qtdao/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13005,7 +13068,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = ' 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/Qtdao/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13015,7 +13078,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/21&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13025,7 +13088,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qtdao/16&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13035,7 +13098,7 @@ ght = math.random(3,300);
 local Text =' ' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '������ ��� ⱽᴵᴾ ', url="t.me/trevor_0"}}, 
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&Photo=https://t.me/wffhvv/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13145,7 +13208,7 @@ PRo = '❴ ✔️ ❵'
 else
 PRo = '❴ ✖ ❵'
 end 
-send(msg.chat_id_, msg.id_,'\n ♫صلاحيات البوت هي\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫  علامة ال {✔️} تعني مفعل\n ♫  علامة ال {✖} تعني غير مفعل\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫تغير معلومات المجموعة ↞ '..INf..'\n ♫مسح الرسائل ↞ '..DEL..'\n ♫حظر المستخدمين ↞ '..REs..'\n ♫دعوة المستخدمين ↞ '..INv..'\n ♫ثتبيت الرسالة ↞ '..Pin..'\n ♫اضافة مشرفين ↞ '..PRo)   
+send(msg.chat_id_, msg.id_,'\n ♫صلاحيات البوت هي\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫  علامة ال {✔️} تعني مفعل\n ♫  علامة ال {✖} تعني غير مفعل\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫تغير معلومات المجموعة ↞ '..INf..'\n ♫مسح الرسائل ↞ '..DEL..'\n ♫حظر المستخدمين ↞ '..REs..'\n ♫دعوة المستخدمين ↞ '..INv..'\n ♫ثتبيت الرسالة ↞ '..Pin..'\n ♫اضافة مشرفين ↞ '..PRo)   
 end
 end
 if text == "تعطيل الانستا" and Manager(msg) then
@@ -13186,7 +13249,7 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end --الكود حصري سورس ايدكيعني لو بكتهن راح اعرفك انت الاخذتهن
-local t = "\n ♫المستخدم ~ ["..User_id .."] يصيح المشرفين \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+local t = "\n ♫المستخدم ~ ["..User_id .."] يصيح المشرفين \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 k = 0
 for i,v in pairs(data.members_) do
 if bot_id ~= v.user_id_ then 
@@ -13227,7 +13290,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."botss:DRAGON:List:Rd:Sudo")
-text = "\nقائمة ردود المتعدده \n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n"
+text = "\nقائمة ردود المتعدده \n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n"
 for k,v in pairs(list) do
 db = "رساله "
 text = text..""..k.." => ↝ '..v..' ↜ => ↝ '..db..' ↜\n"
@@ -14707,20 +14770,6 @@ local List = {
 • 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
 ]],
 [[
-𓄼🇮🇶 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 :#username 
-𓄼🇮🇶 𝑺𝒕𝒂𝒔𝒕 :#stast 
-𓄼🇮🇶 𝒊𝒅 :#id 
-𓄼🇮🇶 ??𝒂𝒎𝒆𝑺 :#game 
-𓄼🇮🇶 𝑴𝒔𝒈𝒔 :#msgs
-]],
-[[
-- 🇨🇰 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 . #username 𖣂.
-- 🇨🇰 𝒔𝒕𝒂𝒔𝒕 . #stast 𖣂.
-- 🇨🇰 ??𝒅 . #id 𖣂.
-- 🇨🇰 𝒈𝒂𝒎𝒆𝒔 . #game ??.
-- 🇨🇰 𝒎𝒔𝒈𝒔 . #msgs 𖣂.
-]],
-[[
 金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
 金 - 𝓼𝓽𝓪𝓼𝓽  . #stast ⸙ 
 金 - 𝓲𝓭 . #id ⸙ 
@@ -14758,13 +14807,6 @@ local List = {
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
-]],
-[[
-.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  
-.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  
-.𖣂 𝙡𝘿 , #id  
-.𖣂 𝙂𝙖𝙢𝙨 , #game 
-.𖣂 𝙢𝙨𝙂𝙨 , #msgs
 ]],
 [[
 𖤍 |↶ #id    ꙰☆.
@@ -14858,14 +14900,6 @@ local List = {
 - 𓏬 𝗖𝗛 - ↝@trevor_0↜ ♫.
 ]],
 [[
-ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
-ᯓ 𝟔𝟔𝟔𖡋 #stast  •✟
-ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
-ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
-ᯓ 𝟔𝟔𝟔𖡋 #game •✟
-ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - ↝@trevor_0↜ ♫.
-]],
-[[
  ♫•𝐮𝐬𝐞𝐫 : #username 𖣬  
  ♫•𝐦𝐬𝐠  : #msgs 𖣬 
  ♫•𝐬𝐭𝐚 : #stast 𖣬 
@@ -14930,14 +14964,6 @@ local List = {
 ➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
 ➞: 𝐢𝐝 𓂅 #id 𓍯➸💞.
 ➞: 𝗖𝗛 - ↝@trevor_0↜ 💞.
-]],
-[[
-➼ : 𝐼𝐷 𖠀 #id . ♡
-➼ : 𝑈𝑆𝐸𝑅 𖠀 #username .♡
-➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
-➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
-➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
-➼ : 𝗖𝗛 - ↝@trevor_0↜ ♫.
 ]],
 [[
 ▽ ¦❀• USER ➭ ⁞ #username .
@@ -15123,22 +15149,6 @@ local List = {
 ‌‎⿻┊‌‎𝗖𝗛 - ↝@trevor_0↜ 💞.
 ]],
 [[
-♫ | 𝐢𝐝  𓃠 #id .
-♫ | 𝐮𝐬??𝐫 𓃠 #username .
-♫ | 𝐦𝐬𝐠 𓃠 #msgs .
-♫ | 𝐬??𝐚 𓃠 #stast .
-♫ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
-♫ | 𝗖𝗛 - ↝@trevor_0↜ 💞.
-]],
-[[
-♡ : 𝐼𝐷 𖠀 #id .
-♡ : 𝑈𝑆𝐸𝑅 𖠀 #username .
-♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
-♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
-♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
-♡ : 𝗖𝗛 - ↝@trevor_0↜ 💞.
-]],
-[[
 •ᑌᔕᗴᖇ- #username 
 •ᔕTᗩ- #stast 
 •ᗰᔕ- #msgs 
@@ -15257,22 +15267,6 @@ Msᴀɢ ~ #msgs
 - ☆ 𝗖𝗛 - ↝@trevor_0↜ ♫.
 ]],
 [[
-ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username ☆ ꙰
-ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast ☆ ꙰
-ᯓ 𝗜𝗗 . #id ☆ ꙰
-ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game ☆ ꙰
-ᯓ 𝗺𝗦𝗚𝗦 . #msgs ☆ ꙰
-ᯓ 𝗖𝗛 - ↝@trevor_0↜ ♫.
-]],
-[[
-.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
-.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
-.𖣂 𝙡𝘿 , #id  🖤 ↴
-.𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
-.𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
-.𖣂 𝗖𝗛 - ↝@trevor_0↜ ??.
-]],
-[[
 ➥• USE 𖦹 #username - ☆.
 ➥• MSG 𖥳 #msgs  - ☆.
 ➥• STA 𖦹 #stast - ☆.
@@ -15310,51 +15304,6 @@ Msᴀɢ ~ #msgs
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
 𝐓𝐓• 𝗖𝗛 - ↝@trevor_0↜ ♫.
-]],
-[[
-𝟓 𝟔 𖡻 #username  ࿇🦄
-𝟓 𝟔 𖡻 #msgs  ࿇🦄
-𝟓 𝟔 𖡻 #auto  ࿇🦄
-𝟓 𝟔 𖡻 #stast  ࿇🦄
-𝟓 𝟔 𖡻 #id  ࿇🦄
-𝟓 𝟔 𖡻 𝗖𝗛 - ↝@trevor_0↜ 💞.
-]],
-[[
-༻┉𖦹┉┉𖦹┉┉𖦹┉┉𖦹┉༺
-• |𝗜𝗗  ⁞ #id
-• |𝗨𝗦𝗘 ⁞ #username
-• |𝗦𝗧𝗔  ⁞ #stast
-• |𝗠𝗦𝗚  ⁞ #edit
-• |𝗔𝗨𝗧𝗢 ⁞ #auto
-—————————————
-𝗖𝗛 - ↝@trevor_0↜ ♫.
-]],
-[[
-┄─━━𖦹━━─┄
-𖣰𖡻 𖡋𝗜𝗗• #id •𓀎
-𖣰𖡻 𖡋𝗨𝗦𝗘• #username •𓀎
-𖣰𖡻 𖡋𝗦𝗧𝗔• #stast •𓀎
-𖣰𖡻 𖡋𝗠𝗦𝗚• #msgs •𓀎
-𖣰𖡻 𖡋𝗔𝗨𝗧𝗢• #auto •𓀎
-𖣰𖡻 𖡋𝗘𝗗𝗜𝗧• #edit • 𓀎
-┄─━━𖦹━━─┄
-𝗖𝗛 - ↝@trevor_0↜  𖦹 .
-]],
-[[
-𖤍 |↶ #id    ꙰☆.
-𖤍 |↶ #username    ꙰☆.
-𖤍 |↶ #msgs    ꙰☆.
-𖤍 |↶ #stast    ꙰☆.
-𖤍 |↶ 𝗖𝗛 - ↝@trevor_0↜ ♫
-]],
-[[
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
- 𝗨𝗦𝗘𝗥 ⟿ #username  « 
- 𝗠𝗦??𝗦 ⟿  #msgs  « 
- 𝗦𝗧𝗔 ⟿ #stast  « 
- 𝗜𝗗  ⟿ #id  « 
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-𝗖𝗛 - ↝@trevor_0↜ ♫
 ]],
 [[
 ☆≪💎≫ #username • メ
@@ -15416,22 +15365,6 @@ Msᴀɢ ~ #msgs
 -√   𝙶𝙼𝙰𝚂 . #stast ☆ ꙰ 
 -√   𝙼??𝙶𝚂 . #msgs ☆ ꙰
 -√   𝗖𝗛 - ↝@trevor_0↜ 🇪?? ꙰.
-]],
-[[
-••• ••• ••• ••• ••• ••• ••• 
-࿕ ¦• 𝙐𝙎𝙀𝙍  ⟿ #username ༆
- ࿕ ¦• 𝙈𝙎𝙂??   ⟿ #msgs ༆
- ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
- ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
-••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗖𝗛 - ↝@trevor_0↜ ♫
-]],
-[[
-► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
-► 𝗜?? #id 𓃚 ꙰
-► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
-► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗖𝗛 - ↝@trevor_0↜ ♫
 ]],
 [[
 - UsEr☆ ꙰ #username
@@ -15637,11 +15570,11 @@ Msᴀɢ ~ #msgs
 • 𝗖𝗛 - ↝@trevor_0↜ ♫
 ]],
 [[
-🌨♫___♬__☆��� ⱽᴵᴾ☆__♬___♫Use ⇨ #username 🌨
-🌨♫___♬__☆��� ⱽᴵᴾ☆__♬___♫iD ⇨ #id 🌨
-🌨♫___♬__☆��� ⱽᴵᴾ☆__♬___♫Sta ⇨  #stast 🌨
-🌨♫___♬__☆��� ⱽᴵᴾ☆__♬___♫Msg ⇨ #msgs 🌨
-🌨♫___♬__☆��� ⱽᴵᴾ☆__♬___♫NaMe ⇨ #name  🌨
+🌨•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•Use ⇨ #username 🌨
+🌨•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•iD ⇨ #id 🌨
+🌨•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•Sta ⇨  #stast 🌨
+🌨•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•Msg ⇨ #msgs 🌨
+🌨•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•NaMe ⇨ #name  🌨
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
@@ -15917,11 +15850,11 @@ Msᴀɢ ~ #msgs
 𝐓𝐓• 𝗖𝗛 - ↝@trevor_0↜ ♫
 ]],
 [[
-↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 ➱ #username ♫  
-↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫𝙄𝘿 ➱ #id
-↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫𝙍𝘼𝙉𝙆 ➱  #stast ♫  
-↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫𝙈𝘼𝙎𝙂 ➱ #msgs ♫  
-↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫𝗖𝗛 ➯  ↝@trevor_0↜ ♫  
+↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 ➱ #username ♫  
+↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•𝙄𝘿 ➱ #id
+↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•𝙍𝘼𝙉𝙆 ➱  #stast ♫  
+↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•𝙈𝘼𝙎𝙂 ➱ #msgs ♫  
+↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•𝗖𝗛 ➯  ↝@trevor_0↜ ♫  
 ]],
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
@@ -16234,7 +16167,7 @@ if Json_Info.result.can_restrict_members == true then
 restrict = '✔️' else restrict = '✖' end
 if Json_Info.result.can_promote_members == true then
 promote = '✔️' else promote = '✖' end 
-send(msg.chat_id_,msg.id_,'\n ♫ اهلا عزيزي البوت هنا ادمن'..'\n ♫ وصلاحياته هي ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ \n━━━━━━━━━━'..'\n ♫ تغير معلومات الجروب ↞ ❴ '..info..' ❵'..'\n ♫ مسح الرسائل ↞ ❴ '..delete..' ❵'..'\n ♫ حظر المستخدمين ↞ ❴ '..restrict..' ❵'..'\n ♫ دعوة مستخدمين ↞ ❴ '..invite..' ❵'..'\n ♫ تثبيت الرسائل ↞ ❴ '..pin..' ❵'..'\n ♫ اضافة مشرفين جدد ↞ ❴ '..promote..' ❵')   
+send(msg.chat_id_,msg.id_,'\n ♫ اهلا عزيزي البوت هنا ادمن'..'\n ♫ وصلاحياته هي •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• \n━━━━━━━━━━'..'\n ♫ تغير معلومات الجروب ↞ ❴ '..info..' ❵'..'\n ♫ مسح الرسائل ↞ ❴ '..delete..' ❵'..'\n ♫ حظر المستخدمين ↞ ❴ '..restrict..' ❵'..'\n ♫ دعوة مستخدمين ↞ ❴ '..invite..' ❵'..'\n ♫ تثبيت الرسائل ↞ ❴ '..pin..' ❵'..'\n ♫ اضافة مشرفين جدد ↞ ❴ '..promote..' ❵')   
 end
 end
 end
@@ -16466,9 +16399,9 @@ return false
 end
 local Text =[[
 اهلا بك في اوامر المجموعه.🚦
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
 اختر الامر الذي تريده بـ الأسفل.⬇️
-[������ ��� ⱽᴵᴾ](t.me/trevor_0)
+[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16485,7 +16418,7 @@ keyboard.inline_keyboard = {
 {text = 'قفل و القفل', callback_data="/help1"},{text = 'تعطيل و تفعيل', callback_data="/help2"},
 },
 {
-{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"},
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -16499,7 +16432,7 @@ local Text = [[
 [🕹اضغط علي الأزرار في الأسفل  .↑]
 [🎯ألعاب سورس ايدك الاحسن في التليجرام .↑]
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- [������ ��� ⱽᴵᴾ ](t.me/trevor_0)
+ [𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16513,7 +16446,7 @@ keyboard.inline_keyboard = {
 {text = 'الاوامر🎡', callback_data="/help90"},
 },
 {
-{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"},
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -16522,7 +16455,7 @@ end
 if text == 'امر الـعـضو ' or text == 'اوامر الأعضاء' or text == 'اوامر الاعضاء' then
 local Text = [[
  اتبع الاوامر الاعضاء
- تحت لي في الزر الأسفل♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ تحت لي في الزر الأسفل•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  
  ..
 ]]
@@ -16532,7 +16465,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر الاعضاء', callback_data="/change-names"},
 },
 {
-{text = '˹������ ��� ⱽᴵᴾ˼', url="t.me/trevor_0"},
+{text = '˹𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ˼', url="t.me/trevor_0"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -16887,11 +16820,11 @@ return false
 end
 local Teext =[[
 اوامر حماية المجموعه ⇊
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
 قفل  ⌁  فتح + الامر 
 قفل  ⌁  فتح ❲ الكـــل ❳
 ❲ بالتقيد ، بالطرد ، بالكتم ❳
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫الروابط
  ♫المعرف
  ♫التاك
@@ -16919,8 +16852,8 @@ local Teext =[[
  ♫الصوت
  ♫الجهات
  ♫الاشعارات
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16939,15 +16872,15 @@ end
 local Teext =[[
  ♫  اوامر اصحاب الرتب ⇊
  ♫الادمن ⌁ المنشئ ⌁ المالك
- ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫❲ المميز❳ ⇊
- ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫ كشف
  ♫ المحظورين
  ♫ المكتومين
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫❲ الادمن❳ ⇊
- ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
 ♫ رفع مميز ⌁ تنزيل مميز
  ♫ الترحيب
  ♫ اضف مغادره ⌁ مسح المغادره
@@ -16962,9 +16895,9 @@ local Teext =[[
  ♫ تثبيت ⌁ تثبيت بدون اشعار
  ♫ الغاء تثبيت الكل
  ♫  ❲ + ❳ جميع ماسبق
- ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫ ❲ المنشئ❳ ⇊
- ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫  رفع ⌁ تنزيل ادمن
  ♫ اضف ⌁  مسح  ❲ رد ❳
  ♫ الردود ⌁  مسح الردود
@@ -16978,9 +16911,9 @@ local Teext =[[
  ♫  مسح الكلمات الممنوعه
  ♫ المميزين عام
  ♫  ❲ + ❳ جميع ماسبق
- ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫ ❲ المالك❳ ⇊
- ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫ اضف صوره ⌁ وصف (للجروب)
  ♫ رفع منشئ ⌁ تنزيل منشئ
  ♫ تاج للاعضاء ⌁ للكل
@@ -16991,8 +16924,8 @@ local Teext =[[
  ♫ ضع اسم+الاسم ⌁ تحديث
  ♫ المنشئين ⌁  مسح المنشئين
  ♫  ❲ + ❳ جميع ماسبق
- ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17010,14 +16943,14 @@ return false
 end
 local Teext =[[
  ♫مرحب بيك في اوامر الوضع واضف ♫
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• 
  ♫اوامر الوضع - اضف
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫اضف / مسح ← رد
  ♫اضف / مسح ← صلاحيه
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫ضع + امر …
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫اسم
  ♫رابط
  ♫ترحيب
@@ -17026,9 +16959,9 @@ local Teext =[[
  ♫صوره
  ♫وصف
  ♫تكرار + عدد
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫اوامر مسح / المسح ← امر
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫الايدي 
  ♫المميزين
  ♫الادمنيه
@@ -17045,12 +16978,12 @@ local Teext =[[
  ♫قائمه منع الملصقات
  ♫مسح قائمه المنع
  ♫المحذوفين
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫مسح  امر + الامر القديم  
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫الاوامر المضافه ( لعرض الاوامر المضافه ) 
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17071,9 +17004,9 @@ return false
 end
 local Teext =[[
  ♫مرحب بيك في اوامر تنزيل ورفع ♫
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• 
  ♫اوامر تنزيل ورفع
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• 
  ♫مميز
  ♫ادمن
  ♫مدير
@@ -17086,9 +17019,9 @@ local Teext =[[
  ♫القيود 
  ♫تنزيل جميع الرتب
  ♫تنزيل الكل 
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫اوامر التغير …
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫تغير رد المطور + اسم
  ♫تغير رد المالك + اسم
  ♫تغير رد منشئ الاساسي + اسم
@@ -17099,9 +17032,9 @@ local Teext =[[
  ♫تغير رد الـعـضو  + اسم
  ♫تغير امر الاوامر
  ♫تغير امر م1 ~ الئ م10
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫• 
  ♫اوامر المجموعه 📢 .
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫استعاده الاوامر 
  ♫تحويل كالاتي⇜ بالرد على صوره او ملصق او صوت او بصمه بالامر ← تحويل 
  ♫صيح ~ تاك ~ المميزين : الادمنيه : المدراء : المنشئين : المنشئين الاساسين
@@ -17145,8 +17078,8 @@ local Teext =[[
  ♫نسبه الانوثه
  ♫الساعه
  ♫التاريخ
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17172,7 +17105,7 @@ local Teext =[[
  ♫مرحب بيك في اوامر للمطورين ♫
 اوامر المطورين ⇊
 ❲المطرو❳  ⇊
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫تفعيل ← تعطيل 
  ♫المجموعات ← المشتركين ← الاحصائيات
  ♫رفع ← تنزيل منشئ اساسي
@@ -17180,9 +17113,9 @@ local Teext =[[
  ♫مسح المنشئين ← المنشئين
  ♫اسم ~ ايدي + بوت غادر 
  ♫اذاعه 
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
 ❲المطور الاساسي+ المطور الثانوي❳
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫تفعيل
  ♫تعطيل
  ♫مسح الاساسين
@@ -17234,8 +17167,8 @@ local Teext =[[
  ♫المجموعات 
  ♫تفعيل/تعطيل المغادره
  ♫مسح الجروبات
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17253,7 +17186,7 @@ return false
 end
 local Teext =[[
     ❲اوامر الاعضاء ⇊❳     
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫   غنيلي ⌁ حساب العمر   
  ♫   صورتي ⌁ نسبه جمالي
  ♫   نقاطي
@@ -17274,8 +17207,8 @@ local Teext =[[
  ♫   بوسو ⌁ بوسها
  ♫   بتحب دي ⌁ بتحب ده
  ♫  بوت الحذف⌁رابط الحذف
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17294,7 +17227,7 @@ end
 local Teext =[[
 اوامر ❲التسليه❳  ⇊
 رفع ⌁ تنزيل + الامر
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  ♫رفع + تنزيل ← متوحد
  ♫تاك للمتوحدين
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
@@ -17343,8 +17276,8 @@ local Teext =[[
  ♫رفع  ← علي زبي
  ♫تنزيل ←من زبي 
  ♫تاك للمتناكين
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17365,11 +17298,11 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-🚨 اهلا بك في قسم الاوامر ..↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
- اختر الامر الذي تريدها .↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-ده من الازرار بلاسفل . ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+🚨 اهلا بك في قسم الاوامر ..↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+ اختر الامر الذي تريدها .↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+ده من الازرار بلاسفل . •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17383,7 +17316,7 @@ keyboard.inline_keyboard = {
 {text = 'ااوامر اصحاب الرتب ⇊', callback_data="/help2"},
 },
 {
-{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"},
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17453,7 +17386,7 @@ local Teext =[[
  ♫ تفعيل/تعطيل المغادره
  ♫ مسح الجروبات
 •┉ • ┉ • ┉ 《𝚃𝚁𝙴𝚅𝙾𝚁》 ┉ • ┉ • ┉•
-➫ .[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴 𝚃𝚁𝙴𝚅𝙾𝚁.](t.me/trevor_0)➤
+➫ .[🖨┇������ ���ⱽᴵᴾ.](t.me/trevor_0)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17496,7 +17429,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/help7"}},
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -17507,11 +17440,11 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-🚨 اهلا بك في قسم الاوامر ..↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
- اختر الامر الذي تريدها .↑♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
-ده من الازرار بلاسفل . ♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+🚨 اهلا بك في قسم الاوامر ..↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+ اختر الامر الذي تريدها .↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+ده من الازرار بلاسفل . •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- ❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+ ❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17528,7 +17461,7 @@ keyboard.inline_keyboard = {
 {text = '◗القائمه الرائسيه◖', callback_data="/add"},
 },
 {
-{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"},
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17550,7 +17483,7 @@ keyboard.inline_keyboard = {
 {{text = 'لعبه كشف الكذب', callback_data="/help47"}},
 {{text = 'مريم', callback_data="/help36"},{text = 'عقاب', callback_data="/help42"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -17659,7 +17592,7 @@ keyboard.inline_keyboard = {
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -17687,8 +17620,8 @@ local Teext =[[
  ♫   بوسو ⌁ بوسها
  ♫   بتحب دي ⌁ بتحب ده
  ♫  بوت الحذف⌁رابط الحذف
-♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
- ❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+ ❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17696,7 +17629,7 @@ keyboard.inline_keyboard = {
 {text = '◗القائمه الرائسيه◖', callback_data="/change-id"},
 },
 {
-{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"},
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17704,7 +17637,7 @@ end
 if Text == '/change-id' then
 local Teext =[[
  اتبع الاوامر الاعضاء
- تحت لي في الزر الأسفل♫___♬__☆��� ⱽᴵᴾ☆__♬___♫
+ تحت لي في الزر الأسفل•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
  
  ..
 ]]
@@ -17714,7 +17647,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر الاعضاء', callback_data="/change-names"},
 },
 {
-{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"},
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17735,7 +17668,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"}},
+{{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -17817,10 +17750,10 @@ end
 --- callback added
 if Text == '/add' then
 local Teext =[[
-🎮 اهلا بك في قسم الالعاب ..↑⟦᪣𝚃𝚁𝙴𝚅𝙾𝚁᪣⟧
-🕹 اختر العبه الذي تريدفي الاسفل ..↑⟦᪣𝚃𝚁𝙴𝚅𝙾𝚁᪣⟧
+🎮 اهلا بك في قسم الالعاب ..↑
+🕹 اختر العبه الذي تريدفي الاسفل ..↑
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- ❲[������ ��� ⱽᴵᴾ ](t.me/trevor_0)❳ 
+ ❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17834,7 +17767,7 @@ keyboard.inline_keyboard = {
 {text = 'الاوامر🎡', callback_data="/help12"},
 },
 {
-{text = '������ ��� ⱽᴵᴾ', url="t.me/trevor_0"},
+{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18187,7 +18120,7 @@ end
 if #list == 0 then
 t = " ♫ لا يوجد ادمن"
 end
-send(msg.chat_id_,0,''..t..'\n♫___♬__☆��� ⱽᴵᴾ☆__♬___♫\n ♫ تم التعديل على الميديا\n ♫ الشخص الي قام بالتعديل\n ♫ ايدي الشخص ◂ '..result.sender_user_id_..'\n ♫ معرف الشخص ↚{ '..users..' }') 
+send(msg.chat_id_,0,''..t..'\n•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•\n ♫ تم التعديل على الميديا\n ♫ الشخص الي قام بالتعديل\n ♫ ايدي الشخص ◂ '..result.sender_user_id_..'\n ♫ معرف الشخص ↚{ '..users..' }') 
 end,nil)
 DeleteMessage(msg.chat_id_,{[0] = msg.message_id_}) 
 end
