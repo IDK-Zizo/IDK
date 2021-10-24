@@ -17192,118 +17192,6 @@ keyboard.inline_keyboard = {
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 
-
-if text == 'مميزات' or text == 'المميزات'or text == '/helpMMM' then 
-if not Mod(msg) then
-send(msg.chat_id_, msg.id_,'مميزات سورس ايدك')
-return false
-end
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,'♫لا تستطيع استخدام البوت \n ♫يرجى الاشتراك بالقناه اولا \n♫ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-local Text =[[
-اهلا بك في مميزات سورس ايدك 🚦
-•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
-اختر الميزه الذي تريده بـ الأسفل.⬇️
-[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'اغاني', callback_data="/helpMM"},{text = 'افلام', callback_data="/helpFF"},
-},
-{
-{text = 'روايات', callback_data="/helpRR"},{text = 'العاب', callback_data="/helpGG"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
-end
-
-if Text == '/helpMM' then
-if not Mod(data) then
-local notText = '✘ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Teext =[[
-مرحبا بك في أغاني ايدك
-❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الرجوع الاوامر ✘', callback_data="/helpMMM"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-
-if Text == '/helpFF' then
-if not Mod(data) then
-local notText = '✘ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Teext =[[
-مرحبا بك في افلام ايدك
-❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الرجوع الاوامر ✘', callback_data="/helpMMM"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-
-if Text == '/helpRR' then
-if not Mod(data) then
-local notText = '✘ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Teext =[[
-مرحبا بك في روايات ايدك
-❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الرجوع الاوامر ✘', callback_data="/helpMMM"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-
-if Text == '/helpGG' then
-if not Mod(data) then
-local notText = '✘ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local Teext =[[
-مرحبا بك في العاب ايدك
-❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الرجوع الاوامر ✘', callback_data="/helpMMM"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-
-
 if Text == '/help6' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
@@ -17523,7 +17411,7 @@ keyboard.inline_keyboard = {
 {text = '6️⃣', callback_data="/help6"},{text = '7️⃣', callback_data="/help7"},{text = '8️⃣', callback_data="/help8"},
 },
 {
-{text = '9️⃣', callback_data="/help9"},{text = '🔟', callback_data="/help10"},{text = '188', callback_data="/helpMMM"},
+{text = '9️⃣', callback_data="/help9"},{text = '🔟', callback_data="/help10"},
 },
 {
 {text = '🔙 الاوامر الرئيسيه 🔙', callback_data="/help"},
