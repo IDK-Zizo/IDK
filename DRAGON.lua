@@ -961,19 +961,13 @@ local keyboard = {
 {'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'تويت','صراحه'},
 {'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
-{'انصحنى','كتابات'},
-{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
-{'عايز اضحك','نكته'},
+{'انصحنى','نكته'},
 {'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'مطور','انا مين'},
 {'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'تعطيل مريم', 'تفعيل مريم',' مريم'},
 {'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'الالعاب'},
-{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
-{'نسبه جمالي','صورتي'},
-{'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
-{'روايات','حروف بالصور'},
 {'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
 {'لو خيروك','تويت بالصور'},
 {'•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•'},
@@ -999,7 +993,7 @@ if text == "/start" then
 if not DevSoFi(msg) then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'ايدك') 
 local DRAGON_Msg = { 
-' 🔵°اهـــلا انا بـوت اسمــي '..Namebot..' ⛓│آختـصاصـي حمايـه آلمجـموعـات ..🥺\n🔵│ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n🚸╽ لتفعيل آلبوت آتبــع الشـروط 😈❕\n↫ ❬اضف البوت الى المجموعه❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل وسيتم تفعيل البوت ورفع مشرفي الكروب تلقائين ❭',
+' ازيك انا '..Namebot..' بوت بحمي الجروبات من نواحي مختلفه😈\n زي السبام والروابط وفي مميزات كتير✰..\n لتفعيلي ف جروبك آتبــع الشـروط 😈❕\n ↫ ❬اضف البوت الى المجموعه❭\n ↫ ❬ارفع البوت ادمن في المجموعه❭\n ↫ ❬وارسل تفعيل وسيتم تفعيل البوت ورفع مشرفي الجروب تلقائي❭',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -1032,9 +1026,9 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"}},
+{{text = '♫ بہقہدونہسہ ♫',url="t.me/trrevor"}},
 {{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆',url="t.me/Fr3on1"}},
-{{text = ' ������ ���ⱽᴵᴾ',url="t.me/trevor_0"}},
+{{text = ' 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ',url="t.me/trevor_0"}},
 {{text = '𝚃𝚁𝙴𝚅𝙾𝚁',url="t.me/trrevor"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -1366,7 +1360,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
 if text == '/start' and DevSoFi(msg) then 
-local Text = '♫انت الان المطور الاساسي في البوت \n ♫سورس ايدك\n ♫يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/trevor_0)'
+local Text = '♫انت الان المطور الاساسي في البوت \n ♫اكتب (ضع اسم للبوت) وحطيلي اسم \n ♫تقدر تتحكم بيا من الزراير في الكيبورد تحت \n [الجديد عندنا](t.me/trevor_0)'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
@@ -1505,7 +1499,7 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = ' 𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
+{{text = ' ♫ بہقہدونہسہ ♫',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
 {{text = ' بوت التواصل',url="t.me/trevor1_bot"}}, 
 {{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 } 
@@ -1519,7 +1513,7 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = ' 𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
+{{text = ' ♫ بہقہدونہسہ ♫',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
 {{text = ' بوت التواصل',url="t.me/trevor1_bot"}}, 
 {{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 } 
@@ -3308,7 +3302,7 @@ local Text = [[
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
-{{text = '◍ 𝐓𝐑𝐄𝐕𝐎𝐑 ',url="t.me/trrevor"},{text = '◍ 𝐅𝐀𝐖𝐙𝐈𝐈 𖣌 ',url="t.me/Fr3on1"}},
+{{text = '◍ 𝐼𝐷𝐾ⱽᴵᴾ ',url="t.me/trrevor"},{text = '◍ 𝐅𝐀𝐖𝐙𝐈𝐈 𖣌 ',url="t.me/Fr3on1"}},
 {{text = '◍ 𝐌𝐘 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ♫  ', url="t.me/trevor_0"}},
 {{text = '◍ 𝐌𝐘 𝐆𝐑𝐎𝐔𝐏 ♫  ', url="t.me/team_fawzii"}},
 }
@@ -3323,7 +3317,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
+{{text = ' ♫ بہقہدونہسہ ♫',url="t.me/trrevor"},{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆', url="t.me/Fr3on1"}},
 {{text = ' بوت التواصل',url="t.me/trevor1_bot"}}, 
 {{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
@@ -3339,7 +3333,7 @@ local Text = [[
  السالك يرايق 💋🌚 
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '  𓌹 ˹𝐙𝐈𝐙𝐎¹˼ 𓌺 ',url="t.me/trrevor"}},}
+keyboard.inline_keyboard = {{{text = '  𓌹 ˹♫ بہقہدونہسہ ♫˼ 𓌺 ',url="t.me/trrevor"}},}
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trrevor&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
@@ -3391,8 +3385,7 @@ local Text = [[
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
-{{text = '𝐅𝐀𝐖𝐙𝐈𝐈',url="t.me/Fr3on1"}},  
-
+{{text = '𝐅𝐀𝐖𝐙𝐈𝐈',url="t.me/Fr3on1"}},  غ
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Fr3on1&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -3402,7 +3395,6 @@ if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' or t
 local Text = [[
 اليك بوتات تحميل ♫
 من جميع المواقع ♫
-
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3429,6 +3421,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ♫ ارسل الان اذاعتك؟ \n ♫ للخروج ارسل الغاء ")
@@ -3457,7 +3450,7 @@ ght = math.random(1,62);
 local Text ='تم اختيار الاستوري هذه لك' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝐓𝐑𝐄𝐕𝐎𝐑☆',url="t.me/trrevor"}},
+{{text = '♫ بہقہدونہسہ ♫',url="t.me/trrevor"}},
 {{text = ' 𝐅𝐀𝐖𝐙𝐈𝐈☆',url="t.me/Fr3on1"}},
 {{text = ' 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ',url="t.me/trevor_0"}},
 } 
@@ -3468,6 +3461,27 @@ end
 
 if text == "تويت" or text == "كت تويت" then 
 local TWEET_Msg = { 
+"انت مرتبط ؟",
+"ايه اكتر حاجه حصلت ف حياتك بتندم عليها",
+"انت عنصري ولا لا ؟",
+"اتخزوقت كام مره؟",
+"بتحب الوحده اكتر ولا تبقى وسط الناس؟",
+"الحب افضل ولا الصداقه؟",
+"تفتكر العيب فالناس ولا فيك؟",
+"تفتكر كام شخص هيلاحظ غيابك؟",
+"ايه الشئ اللي لو مش حرام هتعمله؟",
+"عيطت كام مره؟",
+"مسامح اللي باعك؟",
+"انت ايه ف نظر نفسك؟",
+"امنيتك؟",
+"موهوب ف ايه؟",
+"ايه اكتر اغنيه بتحبها؟",
+"ايه اكتر فيلم عربي حبيته؟",
+"بتحب القهوه اكتر ولا الشاي؟",
+"تاريخ ميلادك كام؟",
+"صاحبك ولا حبيبتك؟",
+"الصصبح احلى ولا الليل؟",
+"بتحب الصيف اكتر ولا الشتا؟",
 "مرتبط؟ ", 
 " هل بتكراش ع حد في حياتك؟", 
 " ينفع نرتبط؟", 
@@ -4264,7 +4278,7 @@ local Text = [[
  ♫من أحسن السورسات على التليجرام سورس ايدك ♫
 حمايه.سرعه.دقه وامان
  قناه السورس ⬇️
-  [W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 ������ ���ⱽᴵᴾ](http://t.me/trevor_0)
+  [W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](http://t.me/trevor_0)
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -4294,7 +4308,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𝐓𝐑𝐄𝐕𝐎𝐑', url="t.me/trrevor"}}, 
+{{text = '𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trrevor"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/trevor_0/101&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -16385,7 +16399,7 @@ end
 ---------------------- الاوامر الجديدة
 if text == 'الاوامر' then
 if not Mod(msg) then
-send(msg.chat_id_, msg.id_,'♫هاذا الامر خاص بالادمنيه\n♫ارسل {⑩} لعرض اوامر الاعضاء')
+send(msg.chat_id_, msg.id_,'♫اتفضل الاوامر تحت')
 return false
 end
 if AddChannel(msg.sender_user_id_) == false then
@@ -16399,7 +16413,6 @@ return false
 end
 local Text =[[
 اهلا بك في اوامر المجموعه.🚦
-•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
 اختر الامر الذي تريده بـ الأسفل.⬇️
 [𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)
 ]]
@@ -16455,7 +16468,7 @@ end
 if text == 'امر الـعـضو ' or text == 'اوامر الأعضاء' or text == 'اوامر الاعضاء' then
 local Text = [[
  اتبع الاوامر الاعضاء
- تحت لي في الزر الأسفل•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+ تحت لي في الزر الأسفل
  
  ..
 ]]
@@ -16749,7 +16762,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Telegram',url="https://my.telegram.org/auth?to=delete"}},
+{{text = 'Telegram', url="https://my.telegram.org/auth?to=delete"}},
 {{text = 'instagram', url="https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/"}}, 
 {{text = 'Facebook', url="https://www.facebook.com/help/deleteaccount"}}, 
 {{text = 'Snspchat', url="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount"}}, 
@@ -16858,7 +16871,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
+{text = 'الرجوع الاوامر ✘', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -16930,7 +16943,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
+{text = 'الرجوع الاوامر ✘', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -16991,7 +17004,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر التنزيل والرفع', callback_data="/help4"},
 },
 {
-{text = '◗القائمه الرائسيه◖', callback_data="/help8"},
+{text = '♫القائمه الرائسيه♫', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17173,7 +17186,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
+{text = 'الرجوع الاوامر ✘', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17213,7 +17226,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
+{text = 'الرجوع الاوامر ✘', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17272,17 +17285,14 @@ local Teext =[[
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
  ♫رفع + تنزيل ← خاين
  ♫تاك للخاينين
-╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- ♫رفع  ← علي زبي
- ♫تنزيل ←من زبي 
- ♫تاك للمتناكين
 •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 ❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'الرجوع الاوامر 🃏', callback_data="/help8"},
+{text = 'الرجوع الاوامر ✘', callback_data="/help8"},
 },
 {
 {text = 'مميزات التسليه 🧸', callback_data="/help10"},
@@ -17328,11 +17338,11 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-𝐒𝐎𝐑𝐂𝐄 𝐓𝐑𝐄𝐕𝐎𝐑 🔥💋
+  𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ 🔥💋
 ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ 
  ♫ اهلا بك عزيزي 🔊
  ♫ اوامر مطور الاساسي 👨🏼‍✈️
-•┉ • ┉ • ┉ 《𝚃𝚁𝙴𝚅𝙾𝚁》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 𝐼𝐷𝐾ⱽᴵᴾ ┉ • ┉ • ┉•
  ♫ تفعيل
  ♫ تعطيل
  ♫ مسح الاساسين
@@ -17342,7 +17352,7 @@ local Teext =[[
  ♫ مسح المطورين
  ♫ المطورين
  ♫ رفع | تنزيل مطور
-•┉ • ┉ • ┉ 《𝚃𝚁𝙴𝚅𝙾𝚁》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 𝐼𝐷𝐾ⱽᴵᴾ ┉ • ┉ • ┉•
  ♫ اسم البوت + غادر
  ♫ غادر
  ♫ اسم بوت + الرتبه
@@ -17354,13 +17364,13 @@ local Teext =[[
  ♫ مسح قائمه العام
  ♫ جلب النسخه
  ♫ رفع النسخه
-•┉ • ┉ • ┉ 《𝚃𝚁𝙴𝚅𝙾𝚁》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 𝐼𝐷𝐾ⱽᴵᴾ ┉ • ┉ • ┉•
  ♫ اذاعه خاص
  ♫ اذاعه
  ♫ اذاعه بالتوجيه
  ♫ اذاعه بالتوجيه خاص
  ♫ اذاعه بالتثبيت
-•┉ • ┉ • ┉ 《𝚃𝚁𝙴𝚅𝙾𝚁》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 𝐼𝐷𝐾ⱽᴵᴾ ┉ • ┉ • ┉•
  ♫ جلب نسخه البوت
  ♫ رفع نسخه البوت
  ♫ ضع عدد الاعضاء + العدد
@@ -17372,21 +17382,21 @@ local Teext =[[
  ♫ اضف/مسح رد عام
  ♫ الردود العامه
  ♫ مسح الردود العامه
-•┉ • ┉ • ┉ 《𝚃𝚁𝙴𝚅𝙾𝚁》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 𝐼𝐷𝐾ⱽᴵᴾ ┉ • ┉ • ┉•
  ♫ الاشتراك الاجباري
  ♫ تعطيل الاشتراك الاجباري
  ♫ تفعيل الاشتراك الاجباري
  ♫ مسح رساله الاشتراك
  ♫ تغير رساله الاشتراك
  ♫ تغير الاشتراك
-•┉ • ┉ • ┉ 《 𝚃𝚁𝙴𝚅𝙾𝚁》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 𝐼𝐷𝐾ⱽᴵᴾ ┉ • ┉ • ┉•
  ♫ الاحصائيات
  ♫ المشتركين
  ♫ المجموعات 
  ♫ تفعيل/تعطيل المغادره
  ♫ مسح الجروبات
-•┉ • ┉ • ┉ 《𝚃𝚁𝙴𝚅𝙾𝚁》 ┉ • ┉ • ┉•
-➫ .[🖨┇������ ���ⱽᴵᴾ.](t.me/trevor_0)➤
+•┉ • ┉ • ┉ 𝐼𝐷𝐾ⱽᴵᴾ ┉ • ┉ • ┉•
+➫ .[🖨┇𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ.](t.me/trevor_0)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17406,7 +17416,7 @@ keyboard.inline_keyboard = {
 {text = '🔙 الاوامر الرئيسيه 🔙', callback_data="/help"},
 },
 {
-{text = '𝐓𝐑𝐄𝐕𝐎𝐑', url="t.me/trevor_0"},
+{text = '𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17428,7 +17438,7 @@ keyboard.inline_keyboard = {
 {{text = 'بتكره دا', callback_data="/help16"},{text = 'نكته', callback_data="/help23"}}, 
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
-{{text = '◗القائمه الرائسيه◖', callback_data="/help7"}},
+{{text = '♫القائمه الرائسيه♫', callback_data="/help7"}},
 {{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17440,9 +17450,10 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-🚨 اهلا بك في قسم الاوامر ..↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
- اختر الامر الذي تريدها .↑•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
-ده من الازرار بلاسفل . •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+  •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
+🚨 اهلا بك في قسم الاوامر 
+ اختر الامر الذي تريدها 
+ من الازرار بلاسفل .
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
  ❲[𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ](t.me/trevor_0)❳ 
 ]]
@@ -17458,7 +17469,7 @@ keyboard.inline_keyboard = {
 {text = 'ااوامر اصحاب الرتب ⇊', callback_data="/help2"},
 },
 {
-{text = '◗القائمه الرائسيه◖', callback_data="/add"},
+{text = '♫القائمه الرائسيه♫', callback_data="/add"},
 },
 {
 {text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
@@ -17482,7 +17493,7 @@ keyboard.inline_keyboard = {
 {{text = 'لعبه الامثله', callback_data="/help35"}},
 {{text = 'لعبه كشف الكذب', callback_data="/help47"}},
 {{text = 'مريم', callback_data="/help36"},{text = 'عقاب', callback_data="/help42"}},
-{{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
+{{text = '♫القائمه الرائسيه♫', callback_data="/add"}},
 {{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17591,7 +17602,7 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
+{{text = '♫القائمه الرائسيه♫', callback_data="/add"}},
 {{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17599,7 +17610,7 @@ end
 if Text == '/change-names' then
 local Teext =[[
     ❲اوامر الاعضاء ⇊❳  
-⚚━━━━━⚚𝐓𝐑𝐄𝐕𝐎??⚚━━━━━⚚
+    𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ
  ♫   غنيلي ⌁ حساب العمر   
  ♫   صورتي ⌁ نسبه جمالي
  ♫   نقاطي
@@ -17626,7 +17637,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '◗القائمه الرائسيه◖', callback_data="/change-id"},
+{text = '♫القائمه الرائسيه♫', callback_data="/change-id"},
 },
 {
 {text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"},
@@ -17637,9 +17648,8 @@ end
 if Text == '/change-id' then
 local Teext =[[
  اتبع الاوامر الاعضاء
- تحت لي في الزر الأسفل•♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
- 
- ..
+ تحت لي في الزر الأسفل
+ •♫•♬•𝐼𝒟𝒦ⱽᴵᴾ•♬•♫•
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17667,7 +17677,7 @@ keyboard.inline_keyboard = {
 {{text = 'بتكره دا', callback_data="/help16"},{text = 'نكته', callback_data="/help23"}}, 
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
-{{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
+{{text = '♫القائمه الرائسيه♫', callback_data="/add"}},
 {{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐼𝐷𝐾ⱽᴵᴾ', url="t.me/trevor_0"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
